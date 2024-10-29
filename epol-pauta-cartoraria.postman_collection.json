@@ -1,0 +1,1010 @@
+{
+	"info": {
+		"_postman_id": "b13c17a1-4a3d-4957-9c25-7d51c8879078",
+		"name": "epol-pauta-cartoraria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3216374"
+	},
+	"item": [
+		{
+			"name": "versao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3_x\":\"2021/4/17/20211221/peca/beb14bababae4a53f36a2256eedfa126\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{epol-pauta}}/versao",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"versao"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "salas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{epol-pauta}}/salas?fimIndex=050&idUnidade=13266&inicioIndex=0",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"salas"
+					],
+					"query": [
+						{
+							"key": "ativo",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "fimIndex",
+							"value": "050"
+						},
+						{
+							"key": "idUnidade",
+							"value": "13266"
+						},
+						{
+							"key": "inicioIndex",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "horarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{epol-pauta}}/salas?fimIndex=050&idUnidade=13266&inicioIndex=0",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"salas"
+					],
+					"query": [
+						{
+							"key": "ativo",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "fimIndex",
+							"value": "050"
+						},
+						{
+							"key": "idUnidade",
+							"value": "13266"
+						},
+						{
+							"key": "inicioIndex",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "diasSemana",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{epol-pauta}}/salas?fimIndex=050&idUnidade=13266&inicioIndex=0",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"salas"
+					],
+					"query": [
+						{
+							"key": "ativo",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "fimIndex",
+							"value": "050"
+						},
+						{
+							"key": "idUnidade",
+							"value": "13266"
+						},
+						{
+							"key": "inicioIndex",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "impedimentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{epol-pauta}}/salas?fimIndex=050&idUnidade=13266&inicioIndex=0",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"salas"
+					],
+					"query": [
+						{
+							"key": "ativo",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "fimIndex",
+							"value": "050"
+						},
+						{
+							"key": "idUnidade",
+							"value": "13266"
+						},
+						{
+							"key": "inicioIndex",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "salvarSsala",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cartaPrecatoria\": true,\n    \"todosDias\": false,\n    \"integral\": true,\n    \"idUnidade\": 13266,\n    \"diasSemana\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Segunda-Feira\",\n            \"selected\": true\n        },\n        {\n            \"id\": 3,\n            \"nome\": \"Quarta-Feira\",\n            \"selected\": true\n        }\n    ],\n    \"horarios\": [\n        {\n            \"id\": 3,\n            \"horario\": \"08:00\",\n            \"selected\": true\n        },\n        {\n            \"id\": 1,\n            \"horario\": \"07:00\",\n            \"selected\": true\n        },\n        {\n            \"id\": 2,\n            \"horario\": \"07:30\",\n            \"selected\": true\n        }\n    ],\n    \"endereco\": \"SAS Quadra 06, Lotes 09/10, 4º andar, sala 416 - Edicio - Sede da Polícia Federal\",\n    \"existeIntimacao\": false,\n    \"nome\": \"denis\",\n    \"sobreposicao\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{epol-pauta}}/salas",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "salvarImpedimento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeImpedimento\": \"teste denis\",\n    \"dataInicio\": \"10/10/2022 00:00\",\n    \"dataFim\": \"10/12/2022 00:00\",\n    \"cpfServidor\": \"00496720104\",\n    \"horarioIntegral\": false,\n    \"todosDias\": false,\n    \"diaSemana\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Segunda-Feira\",\n            \"selected\": true\n        },\n        {\n            \"id\": 3,\n            \"nome\": \"Quarta-Feira\",\n            \"selected\": true\n        }\n    ],\n    \"horarios\": [\n        {\n            \"id\": 3,\n            \"horario\": \"08:00\",\n            \"selected\": true\n        },\n        {\n            \"id\": 1,\n            \"horario\": \"07:00\",\n            \"selected\": true\n        },\n        {\n            \"id\": 2,\n            \"horario\": \"07:30\",\n            \"selected\": true\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{epol-pauta}}/impedimentos",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"impedimentos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "alterarSsala",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"denisdddd\",\n    \"dataCriacao\": \"2023-06-29\",\n    \"sobreposicao\": 2,\n    \"endereco\": \"SAS Quadra 06, Lotes 09/10, 4º andar, sala 416 - Edicio - Sede da Polícia Federal\",\n    \"idUnidade\": 14304,\n    \"cartaPrecatoria\": true,\n    \"integral\": false,\n    \"todosDias\": false,\n    \"ativo\": true,\n    \"horarios\": [\n        {\n            \"id\": 3,\n            \"horario\": \"08:00\",\n            \"selected\": true\n        },\n        {\n            \"id\": 4,\n            \"horario\": \"08:30\",\n            \"selected\": true\n        }\n    ],\n    \"diasSemana\": [\n        {\n            \"id\": 2,\n            \"nome\": \"Terça-Feira\",\n            \"selected\": true\n        },\n        {\n            \"id\": 4,\n            \"nome\": \"Quinta-Feira\",\n            \"selected\": true\n        }\n    ],\n    \"unidade\": null,\n    \"existeIntimacao\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{epol-pauta}}/salas/1042",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"salas",
+						"1042"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{acces_token_url}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "prehom",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "ctidpf",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "raphael.rbl",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "sistemasDPF",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

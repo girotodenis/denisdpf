@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "520e4edf-26eb-43cf-8270-9fb731938bc4",
+		"name": "epol-mobile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5855123"
+	},
+	"item": [
+		{
+			"name": "epol-rest",
+			"item": [
+				{
+					"name": "cadastro_pessoa_f_mobile_fuse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMS1VpVlRGYkdKMk9BT3d6eVJ3UmM0U1BDSGF2LUNodl9yMlplc1ZWdGNZIn0.eyJleHAiOjE2ODE4NTczNjIsImlhdCI6MTY4MTg1NDY2MiwiYXV0aF90aW1lIjoxNjgxODU0MDY5LCJqdGkiOiI4MWY3YWZlNi05NTUzLTRiZTgtYjkwMi1mYzVmNGYwODU3NzgiLCJpc3MiOiJodHRwczovL2F1dGhwcmVob20ucGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJyZWFsbS1tYW5hZ2VtZW50IiwiY2F0YWxvZ28tcmVzdCIsInNpbmljMi1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJ0b2dnbGUtcmVzdCIsImNvcnJlaWNhby1yZXN0IiwiYWNjb3VudCIsImVwb2wtYXJxdWl2b3MiLCJlcG9sLWJhdGNoIl0sInN1YiI6IjI0OWEyODRhLWQwYjAtNDMyOS05YjJlLTczY2YxMjgzZGJhYyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVwb2wtd2ViIiwibm9uY2UiOiI3N2ZmMjg3Ni0yZDcwLTRmODgtOGE4NS1lMzkzODIyNDljOWQiLCJzZXNzaW9uX3N0YXRlIjoiN2Q0ODc4NzMtYTU4YS00ZGFlLTk4ZmYtNmJlZTNlYzhkNDk3IiwiYWNyIjoiMCIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzcHJlaG9tLnBmLmdvdi5iciIsImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MSIsImh0dHBzOi8vcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMTAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImdlcmVuY2lhcl91c3VhcmlvcyJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJyZWFsbS1tYW5hZ2VtZW50Ijp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwicXVlcnktY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyIsInF1ZXJ5LXVzZXJzIl19LCJjYXRhbG9nby1yZXN0Ijp7InJvbGVzIjpbInNlcnZpY29zIl19LCJzaW5pYzItcmVzdCI6eyJyb2xlcyI6WyJOSVZFTF8zIiwiTklWRUxfNCJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiZXBvbC1nZXN0YW8iLCJlZGljYW8iLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byIsInJlc3RyaWNhb19jYXNvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImNvcnJlaWNhby1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJlcG9sLWFycXVpdm9zIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1iYXRjaCI6eyJyb2xlcyI6WyJlcG9sX2JhdGNoX21hbnVhbCJdfX0sInNjb3BlIjoib3BlbmlkIFBGLUN1c3RvbS1DbGFpbXMiLCJzaWQiOiI3ZDQ4Nzg3My1hNThhLTRkYWUtOThmZi02YmVlM2VjOGQ0OTciLCJuYW1lIjoiUmFwaGFlbCBCYWdnaW8gZGUgTHVjYSBMdWNhIiwicHJlZmVycmVkX3VzZXJuYW1lIjoicmFwaGFlbC5yYmwiLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuMTk5IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.XX6un6r1ElhAfrEUqaU2VuJ2VPVK7wkVJLePBiHBv1VObWCDrMvL8CqPf3CwBj7fQmvcnzYEbDXpCXIOqDTpPNjw0Uerd9sLkYx1ywGz_EwCehDSwe5C742A8nMKkSN1h1AxC0p3DAenacSsT1ZdGKyZpHGg0dY7oudSFCQF-zS4X630-BimCn7YLn0UyuCnkO1FGtkhWPN2AjPTtRkc8jYBnsv6RWTCcM51CKZBE0Ok2mDK1woWQkC3NNqRxbujNuasEPReVb_YFXqRGoJIea4wTCJ37W5ej0CLYlx2PVPjN4zrA7bbsSISthnvIZu1Hv-nIYOZ-wbnWYWY9N41uA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoPessoa\": 1,\n    \"cpf\": \"04103283670\",\n    \"nomePf\": \"Denis Giroto Silva\",\n    \"nomeSocial\": \"Denis Giroto\",\n    \"nomeDaMae\": \"Rosa Helena\",\n    \"nomeDoPai\": \"Adenir Giroto\",\n    \"dataNascimento\": \"17/08/2020\",\n    \"dataFalecimento\": null,\n    \"idSexo\": 3,\n    \"outros\": \"Muito Macho\",\n    \"idRacaCor\": 2,\n    \"idEstadoCivil\": 2,\n    \"escolaridade\": 9,\n    \"nacionalidade\": 24,\n    \"ufNascimento\": \"DF\",\n    \"municipioNascimento\": 5300108,\n    \"idSituacao\": 3,\n    \"descricaoForo\": \"idSituacao 3 some text\",\n    \"dataEstimadaTerminoForo\": \"17/08/2028\",\n    \"email\": [\n        \"denis@stefanini.com\",\n        \"giroto@stefanini.com\"\n    ],\n    \"fotosPessoa\": [\n        { \"id\": 93534 }, { \"id\": 93535 }\n    ],\n    \"documentos\": [{\n            \"tipoDocumento\": 9,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 2073551,\n            \"dataEmissao\": \"17/08/2000\",\n            \"orgaoExpedidor\": \"SSP\",\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 2,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 77211635010,\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 11,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 45654684545,\n            \"zona\": \"zona x\",\n            \"secao\": \"xibat\",\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 13,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 5455545,\n            \"estadoEmissao\": \"DF\",\n            \"situacao\": 3\n        },\n        {\n            \"tipoDocumento\": 7,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 222073551,\n            \"forca\": 2,\n            \"dataEmissao\": \"17/08/2000\",\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 4,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 4554,\n            \"orgaoClasse\": 15,\n            \"dataEmis sao\": \"17/08/2000\",\n            \"estadoEmissao\": \"DF\"\n        }\n    ],\n    \"enderecos\": [\n        {\n            \"bairro\": \"some text x\",\n            \"cep\": 72876140,\n            \"complemento\": \"some text 2\",\n            \"endereco\": \"some text 1\",\n            \"pais\": 24,\n            \"uf\": \"DF\",\n            \"municipio\": 5300108,\n            \"numeroEndereco\": \"some text\",\n            \"datum\": 1,\n            \"formato\": 1,\n            \"latitude\": 1,\n            \"grauLatitude\": 1,\n            \"minutosLatitude\": 1,\n            \"segundosLatitude\": 1,\n            \"pontoCardealLatitude\": 1,\n            \"longitude\": 1,\n            \"grauLongitude\": 1,\n            \"minutosLongitude\": 1,\n            \"segundosLongitude\": 1,\n            \"pontoCardealLongitude\": 1\n        }\n    ],\n     \"telefones\": [\n        {\n            \"telefone\": 984311315,\n            \"ddd\": 61,\n            \"tipoTelefone\": 1,\n            \"ddi\": 82,\n            \"id\": 84\n        },\n        {\n            \"telefone\": 984311316,\n            \"ddd\": 61,\n            \"tipoTelefone\": 1,\n            \"ddi\": 82,\n            \"id\": 84\n        }\n    ],\n    \"profissoes_x\": [\n        {\n            \"idNaturezaProfissao\": 1,\n            \"nomeProfissao\": \"some text\",\n            \"id\": 85\n        },\n        {\n            \"idNaturezaProfissao\": 2,\n            \"nomeProfissao\": \"some text\",\n            \"id\": 48\n        }\n    ],\n    \"outrosNomes\": [\n        {\n            \"nome\": \"some text 1\",\n            \"tipoNome\": 1\n        },\n        {\n            \"nome\": \"some text 2\",\n            \"tipoNome\": 2\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/epol-server/api/pessoaMobile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"epol-server",
+								"api",
+								"pessoaMobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_pessoa_j_mobile_fuse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoPessoa\": 2,\n    \"razaoSocial\": \"Nome Social Giroto\",\n    \"nomePj\": \"some text PJ\",\n    \"cnpj\": \"12427753000167\",\n    \"atividadePj\": \"atividadePj ddfdf dfdf\" ,\n    \"naturezaAtividadePj\": \"naturezaAtividadePj dfdf dfdfd\",\n    \"email\": [\n        \"denis@stefanini.com\",\n        \"giroto@stefanini.com\"\n    ],\n    \"fotosPessoa\": [\n        { \"id\": 93534 }, { \"id\": 93535 }\n    ],\n    \"enderecos\": [\n         {\n            \"bairro\": \"some text dx\",\n            \"cep\": 72876140,\n            \"complemento\": \"some textd 2\",\n            \"endereco\": \"some text d1\",\n            \"pais\": 24,\n            \"uf\": \"DF\",\n            \"municipio\": 5300108,\n            \"numeroEndereco\": \"some text\",\n            \"datum\": 1,\n            \"formato\": 1,\n            \"latitude\": 1,\n            \"grauLatitude\": 1,\n            \"minutosLatitude\": 1,\n            \"segundosLatitude\": 1,\n            \"pontoCardealLatitude\": 1,\n            \"longitude\": 1,\n            \"grauLongitude\": 1,\n            \"minutosLongitude\": 1,\n            \"segundosLongitude\": 1,\n            \"pontoCardealLongitude\": 1\n        }\n    ],\n     \"telefones\": [\n        {\n            \"telefone\": 984311315,\n            \"ddd\": 61,\n            \"tipoTelefone\": 1,\n            \"ddi\": 82,\n            \"id\": 84\n        }\n    ],\n    \"membros\": [\n        {\n            \"tipoEnvolvimento\": 1,\n            \"pessoa\": 735534,\n            \"inicioEnvolvimento\": \"17/08/2020\",\n            \"nomeEmpresa\": \"some texnomeEmpresat\",\n            \"tipoEmpresa\": \"some textipoEmpresat\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-rest_url}}/pessoaMobile",
+							"host": [
+								"{{epol-rest_url}}"
+							],
+							"path": [
+								"pessoaMobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "anexo_pessoa_mobile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/dgiroto/Imagens/denis_escritorio.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{epol-rest_url}}/pessoaMobile/anexo?nomeArquivo=teste_epol.jpg",
+							"host": [
+								"{{epol-rest_url}}"
+							],
+							"path": [
+								"pessoaMobile",
+								"anexo"
+							],
+							"query": [
+								{
+									"key": "nomeArquivo",
+									"value": "teste_epol.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "busca_pessoa_mobile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "busca_arquivo_mobile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "epol-fuse",
+			"item": [
+				{
+					"name": "anexo_pessoa_mobile_fuse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/dgiroto/Imagens/denis_escritorio.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{epol-fuse_url}}/pessoaMobile/anexo?nomeArquivo=teste_epol.jpg",
+							"host": [
+								"{{epol-fuse_url}}"
+							],
+							"path": [
+								"pessoaMobile",
+								"anexo"
+							],
+							"query": [
+								{
+									"key": "nomeArquivo",
+									"value": "teste_epol.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastro_pessoa_f_mobile_fuse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoPessoa\": 1,\n    \"cpf\": \"04103283670\",\n    \"nomePf\": \"Denis Giroto Silva\",\n    \"nomeSocial\": \"Denis Giroto\",\n    \"nomeDaMae\": \"Rosa Helena\",\n    \"nomeDoPai\": \"Adenir Giroto\",\n    \"dataNascimento\": \"17/08/2020\",\n    \"dataFalecimento\": null,\n    \"idSexo\": 3,\n    \"outros\": \"Muito Macho\",\n    \"idRacaCor\": 2,\n    \"idEstadoCivil\": 2,\n    \"escolaridade\": 9,\n    \"nacionalidade\": 24,\n    \"ufNascimento\": \"DF\",\n    \"municipioNascimento\": 5300108,\n    \"idSituacao\": 3,\n    \"descricaoForo\": \"idSituacao 3 some text\",\n    \"dataEstimadaTerminoForo\": \"17/08/2028\",\n    \"email\": [\n        \"denis@stefanini.com\",\n        \"giroto@stefanini.com\"\n    ],\n    \"fotosPessoa\": [\n        { \"id\": 93534 }, { \"id\": 93535 }\n    ],\n    \"documentos\": [{\n            \"tipoDocumento\": 9,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 2073551,\n            \"dataEmissao\": \"17/08/2000\",\n            \"orgaoExpedidor\": \"SSP\",\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 2,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 77211635010,\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 11,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 45654684545,\n            \"zona\": \"zona x\",\n            \"secao\": \"xibat\",\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 13,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 5455545,\n            \"estadoEmissao\": \"DF\",\n            \"situacao\": 3\n        },\n        {\n            \"tipoDocumento\": 7,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 222073551,\n            \"forca\": 2,\n            \"dataEmissao\": \"17/08/2000\",\n            \"estadoEmissao\": \"DF\"\n        },\n        {\n            \"tipoDocumento\": 4,\n            \"fotosDodumentos\": [ { \"id\": 93535 } ],\n            \"numeroDocumento\": 4554,\n            \"orgaoClasse\": 15,\n            \"dataEmis sao\": \"17/08/2000\",\n            \"estadoEmissao\": \"DF\"\n        }\n    ],\n    \"enderecos\": [\n        {\n            \"bairro\": \"some text x\",\n            \"cep\": 72876140,\n            \"complemento\": \"some text 2\",\n            \"endereco\": \"some text 1\",\n            \"pais\": 24,\n            \"uf\": \"DF\",\n            \"municipio\": 5300108,\n            \"numeroEndereco\": \"some text\",\n            \"datum\": 1,\n            \"formato\": 1,\n            \"latitude\": 1,\n            \"grauLatitude\": 1,\n            \"minutosLatitude\": 1,\n            \"segundosLatitude\": 1,\n            \"pontoCardealLatitude\": 1,\n            \"longitude\": 1,\n            \"grauLongitude\": 1,\n            \"minutosLongitude\": 1,\n            \"segundosLongitude\": 1,\n            \"pontoCardealLongitude\": 1\n        }\n    ],\n     \"telefones\": [\n        {\n            \"telefone\": 984311315,\n            \"ddd\": 61,\n            \"tipoTelefone\": 1,\n            \"ddi\": 82,\n            \"id\": 84\n        },\n        {\n            \"telefone\": 984311316,\n            \"ddd\": 61,\n            \"tipoTelefone\": 1,\n            \"ddi\": 82,\n            \"id\": 84\n        }\n    ],\n    \"profissoes_x\": [\n        {\n            \"idNaturezaProfissao\": 1,\n            \"nomeProfissao\": \"some text\",\n            \"id\": 85\n        },\n        {\n            \"idNaturezaProfissao\": 2,\n            \"nomeProfissao\": \"some text\",\n            \"id\": 48\n        }\n    ],\n    \"outrosNomes\": [\n        {\n            \"nome\": \"some text 1\",\n            \"tipoNome\": 1\n        },\n        {\n            \"nome\": \"some text 2\",\n            \"tipoNome\": 2\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-rest_url}}/pessoaMobile",
+							"host": [
+								"{{epol-rest_url}}"
+							],
+							"path": [
+								"pessoaMobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "busca_pessoa_mobile_fuse",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "busca_arquivo_mobile_fuse",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{acces_token_url}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "prehom",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "ctidpf",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "raphael.rbl",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "sistemasDPF",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
