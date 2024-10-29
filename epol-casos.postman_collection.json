@@ -1,0 +1,1732 @@
+{
+	"info": {
+		"_postman_id": "2df425a9-998b-4356-b6c9-c71d739588ee",
+		"name": "epol-casos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3216374"
+	},
+	"item": [
+		{
+			"name": "imagem",
+			"item": [
+				{
+					"name": "repositorio_post_imagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": "/home/dgiroto/Imagens/denis_escritorio.jpg"
+								},
+								{
+									"key": "nomeArquivo",
+									"value": "epol.jpg",
+									"type": "text"
+								},
+								{
+									"key": "contentType",
+									"value": "application/jpeg",
+									"type": "text"
+								},
+								{
+									"key": "idS3",
+									"value": "2022/4/17/20211221/anexos/c49285d6b1eae40f06826e90ef864db1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "estruturaPasta",
+									"value": "2022/4/17/20211221/anexos",
+									"type": "text"
+								},
+								{
+									"key": "rascunho",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "md5",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "sha256",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repositorio_get_stream",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2022/4/17/20211221/anexos/408b1adee7ef3486690effe51983a9c7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/stream",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"stream"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_get_stream_thumbnail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idS3\": \"2022/4/17/20211221/anexos/35e782f6dddaf78b290e7c0223e8cd9a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/thumbnail/stream",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"thumbnail",
+								"stream"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "repo",
+			"item": [
+				{
+					"name": "repositorio_get_stream",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis_x\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3_x\":\"2021/4/17/20211221/peca/beb14bababae4a53f36a2256eedfa126\",\n    \"idS3\":\"deposito/2023/08/03/c867ae30fb6b927274f7a1365449cfda\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/stream",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"stream"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_get_streamThumb",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3_x\":\"2021/4/17/20211221/peca/beb14bababae4a53f36a2256eedfa126\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/stream",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"stream"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_get_object",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"cfb0cd5d-1a12-4069-92dd-3ecc0028e1dd\",\n    \"idS3_2\":\"2021/11/22/20211221/peca/89ae17cefb2f9b327367005657e19cda\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/4/17/20211221/peca/baafd7814ea2774f3ec477baece90981\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_assinar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3_x\":\"2021/4/17/20211221/peca/611771e1370916bb79c584c41dc18ff1\",\n\t\"ultimaPaginaCarimbada\":200,\n\t\"numeroCaso\":\"2022.0000021\",\n\t\"siglaUnidade\":\"SR/PF/SP\",\n    \"estruturaPasta\":\"2021/4/17/20211221/peca\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/pdf/carimbo/numeracao",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"pdf",
+								"carimbo",
+								"numeracao"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/4/17/20211221/peca/baafd7814ea2774f3ec477baece90981\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_assinar Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3_x\":\"2021/4/17/20211221/peca/611771e1370916bb79c584c41dc18ff1\",\n\t\"ultimaPaginaCarimbada\":100,\n\t\"numeroCaso\":\"2022.0000021\",\n\t\"siglaUnidade\":\"SR/PF/SP\",\n    \"estruturaPasta\":\"2021/4/17/20211221/peca\",\n    \"textoAutenticacao\":\"Autenticado por DELEGADO, JOSE ARAUJO, MATRÍCULA:4545545558, em 12/12/2022, às 22:38 mi. Este documento tem o mesmo valor comprobante do original apresentado, nos termos do § 1º do Art. 11 da Lei 11.419/2006\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/pdf/carimbo/autenticador",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"pdf",
+								"carimbo",
+								"autenticador"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/4/17/20211221/peca/baafd7814ea2774f3ec477baece90981\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_post_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": "/home/dgiroto/Documentos/DPF/epol/epol_massa_teste/epol_5.pdf"
+								},
+								{
+									"key": "nomeArquivo",
+									"value": "pdf_com_5_folhas.pdf",
+									"type": "text"
+								},
+								{
+									"key": "contentType",
+									"value": "application/pdf",
+									"type": "text"
+								},
+								{
+									"key": "idS3",
+									"value": "2021/11/22/20211221/peca/3b383485e4df894a6372bf0115374ecb",
+									"type": "text"
+								},
+								{
+									"key": "estruturaPasta",
+									"value": "2021/11/22/20211221/peca",
+									"type": "text"
+								},
+								{
+									"key": "rascunho",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "md5",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "sha256",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"value": "false",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repositorio_post_encryp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": "/home/dgiroto/Documentos/DPF/epol/epol_massa_teste/epol_4.pdf"
+								},
+								{
+									"key": "nomeArquivo",
+									"value": "pdf_com_4_folhas.pdf",
+									"type": "text"
+								},
+								{
+									"key": "contentType",
+									"value": "application/pdf",
+									"type": "text"
+								},
+								{
+									"key": "idS3",
+									"value": "2021/4/17/20211221/peca/611771e1370916bb79c584c41dc18ff1",
+									"type": "text"
+								},
+								{
+									"key": "estruturaPasta",
+									"value": "2021/4/17/20211221/peca",
+									"type": "text"
+								},
+								{
+									"key": "rascunho",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "md5",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "sha256",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"value": "false",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sseKey",
+									"value": "e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis_x\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3\":\"2021/4/17/20211221/peca/611771e1370916bb79c584c41dc18ff1\",\n\t\"md5\":true,\n\t\"sha256\":true,\n    \"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/4/17/20211221/peca/baafd7814ea2774f3ec477baece90981\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_get_stream_decripy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idS3\":\"2021/4/17/20211221/peca/611771e1370916bb79c584c41dc18ff1\",\n    \"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/stream",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"stream"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "repositorio_get_object",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_alfresco",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio",
+										"objeto"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "repositorio_get_object_decryp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+								},
+								"url": {
+									"raw": "{{epol-arquivos-url}}/repositorio",
+									"host": [
+										"{{epol-arquivos-url}}"
+									],
+									"path": [
+										"repositorio"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "repositorio_post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "nomeArquivo",
+									"value": "pdf_com_3_folhas.pdf",
+									"type": "text"
+								},
+								{
+									"key": "contentType",
+									"value": "application/pdf",
+									"type": "text"
+								},
+								{
+									"key": "idS3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "estruturaPasta",
+									"value": "2021/11/22/20211221/peca",
+									"type": "text"
+								},
+								{
+									"key": "rascunho",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "md5",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "sha256",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"value": "false",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "htmlToPdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idS3",
+							"value": "2021/11/22/20211221/peca/5027fd09e664683e43bc2622497b2c0e",
+							"type": "text"
+						},
+						{
+							"key": "nomeArquivo",
+							"value": "html_to_pdf.pdf",
+							"type": "text"
+						},
+						{
+							"key": "estruturaPasta",
+							"value": "2021/11/22/20211221/peca",
+							"type": "text"
+						},
+						{
+							"key": "sseKey",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "html",
+							"value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<html>\n\t\n<head>\n\t\t<meta charset=\"UTF-8\" />\n\t\t<style>/*<![CDATA[*/\n@page{size: 210mm 297mm;margin: 10mm;}\n/*]]>*/</style>\n\t</head>\n\t\n<body style=\"word-wrap:break-word;\">\n\t\t<br>\n\t\t\t<br>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:center\">\n\t\t\t\t\t<span style=\"font-size:12pt\">\n\t\t\t\t\t\t<span style=\"color:#000000\">\n\t\t\t\t\t\t\t<strong>\n\t\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t\t\t<img src=\"data:image/jpeg;base64,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\" alt=\"brasao.jpg\" />\n\t\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</strong>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"color:#000000\">\n\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t\tPOLÍCIA FEDERAL\n\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"color:#000000\">\n\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t\t<span id=\"iep9j39rt4e8a\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.nome\">@caso.unidadeDoCaso.nome</span>\n\t\t\t\t\t\t\t\t  - \n\t\t\t\t\t\t\t\t<span id=\"iep28h3dd7ij\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.sigla\">@caso.unidadeDoCaso.sigla</span>\n\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t<span id=\"iepvmammnyta\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.enderecoUnidade\">@caso.unidadeDoCaso.enderecoUnidade</span>\n\t\t\t\t\t\t\t  - \n\t\t\t\t\t\t\t<span id=\"iep8dhhkkfk5r\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.municipio\">@caso.unidadeDoCaso.municipio</span>\n\t\t\t\t\t\t\t/\n\t\t\t\t\t\t\t<span id=\"iep59qtxxwijx\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.municipio.estado.sigla\">@caso.unidadeDoCaso.municipio.estado.sigla</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:center\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:center\">\n\t\t\t\t\t<span style=\"font-size:12pt\">\n\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t<strong>\n\t\t\t\t\t\t\t\t<span style=\"font-size:14pt\">RELATÓRIO N°</span>\n\t\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t\t\t<span style=\"line-height:150%;color:black\">\n\t\t\t\t\t\t\t\t\t\t<span style=\"font-size:14pt\">\n\t\t\t\t\t\t\t\t\t\t\t<span id=\"iep2w43174acr\" class=\"varMesclagem\" data-var=\"numero.documento\">@numero.documento</span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</strong>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t<strong>\n\t\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t\t\t<span style=\"line-height:150%;color:black\">\n\t\t\t\t\t\t\t\t\t\t<span id=\"iep76dpwesxgq\" class=\"varMesclagem\" data-var=\"caso.ipl\">@caso.ipl</span>\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</strong>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\tINQUÉRITO POLICIAL:\n\t\t\t\t\t\t<span id=\"iep81hxjcb46v\" class=\"varMesclagem\" data-var=\"caso.etiqueta\">@caso.etiqueta</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tProcesso Judicial nº: \n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData do fato:\n\t\t\t\t\t\t<span id=\"iepie9yp4lem\" class=\"varMesclagem\" data-var=\"caso.fato.fatoInicio\">@caso.fato.fatoInicio</span>\n\t\t\t\t\t\t \n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData do protocolo: \n\t\t\t\t\t\t<span id=\"iep8peu4nkq8j\" class=\"varMesclagem\" data-var=\"caso.dataRegistro\">@caso.dataRegistro</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData da instauração:\n\t\t\t\t\t\t<span id=\"iep4mzjnuk0lr\" class=\"varMesclagem\" data-var=\"caso.dataInstauracao\">@caso.dataInstauracao</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData do término da investigação: \n\t\t\t\t\t\t<span id=\"iep2ejqjphdcn\" class=\"varMesclagem\" data-var=\"data\">@data</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData da prescrição: \n\t\t\t\t\t\t<span id=\"iep2k3tw7tlc2\" class=\"varMesclagem\" data-var=\"caso.dataPrescricao\">@caso.dataPrescricao</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tTipos penais:\n\t\t\t\t\t\t<span id=\"iep8abv8ol256\" class=\"varMesclagem\" data-var=\"condutas.incidencias\">@condutas.incidencias</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tBens apreendidos: [SIM ou NÃO]\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Indiciados: </span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<span style=\"text-align:justify;display:block\">\n\t\t\t\t\t\t\t<span id=\"iep96nl0zcxlt\" class=\"varMesclagem\" style=\"text-align:justify;display:block\" data-var=\"envolvidos.qualificacao.envolvimento\">@envolvidos.qualificacao.envolvimento</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>I- FATO INVESTIGADO E SUAS CIRCUNSTÂNCIAS</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\tO presente Inquérito Policial foi instaurado por Portaria na data supra mencionada, para apurar\n\t\t\t\t\t\t<span id=\"iepc3ffpjxmg\" class=\"varMesclagem\" data-var=\"caso.fato.resumo\">@caso.fato.resumo</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>II- DAS DILIGÊNCIAS REALIZADAS</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Texto...</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>III- PROVA DE MATERIALIDADE E INDÍCIOS DE AUTORIA</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Texto... </span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>IV- ELEMENTOS COLHIDOS SOBRE CULPABILIDADE, ANTECEDENTES, CONDUTA SOCIAL, PERSONALIDADE, MOTIVOS, CIRCUNSTÂNCIAS, CONSEQUÊNCIAS DO CRIME E COMPORTAMENTO DA VÍTIMA</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tTexto....\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>V- OUTRAS CONSIDERAÇÕES</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Texto....</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>VI- CONCLUSÃO</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Posto isto, encerram-se os trabalhos de Polícia Judiciária, remetendo-se os presentes autos para apreciação e demais providências que se entendam pertinentes, permanecendo este órgão policial à disposição para eventuais outras diligências que sejam imprescindíveis ao oferecimento da denúncia (art. 16 c/c art. 46/CPP).</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">É o relatório.</span>\n\t\t\t\t</p>\n\t\t\t\t<div style=\"text-align: center;\">\n\t\t\t\t\t<br />\n\t\t\t\t\t<br />\n\t\t\t\t\t<div style=\"border-top: 1px solid; border-bottom: 1px solid; page-break-inside: avoid;\">\n\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\tDocumento eletrônico assinado em 11/11/2020, às 07h51, por WELLINGTON COSTA DA SILVA, Escrivao de Policia Federal, na forma do artigo 1º, inciso III, da Lei 11.419, de 19 de dezembro de 2006.\n\t\t\t\t\t\t\tA autenticidade deste documento pode ser conferida no site https://servicos.dpf.gov.br/assinatura/app/assinatura, informando o seguinte código verificador:\n\t\t\t\t\t\t\tec999fcdebbeae903f0f47df0ac5be8e97202da6\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div style=\"text-align: center;\"></div>\n\t\t\t</br>\n\t\t</br>\n\t</body>\n</html>",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{epol-arquivos-url}}/htmlToPdf",
+					"host": [
+						"{{epol-arquivos-url}}"
+					],
+					"path": [
+						"htmlToPdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disponibilizar_html",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idS3",
+							"value": "2021/11/22/20211221/peca/5027fd09e664683e43bc2622497b2c0e",
+							"type": "text"
+						},
+						{
+							"key": "nomeArquivo",
+							"value": "html_to_pdf.pdf",
+							"type": "text"
+						},
+						{
+							"key": "estruturaPasta",
+							"value": "2021/11/22/20211221/peca",
+							"type": "text"
+						},
+						{
+							"key": "sseKey",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ultimaPaginaCarimbada",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "numeroCaso",
+							"value": "2020.0001",
+							"type": "text"
+						},
+						{
+							"key": "siglaUnidade",
+							"value": "DPF/BRU/SP",
+							"type": "text"
+						},
+						{
+							"key": "html",
+							"value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<html>\n\t\n<head>\n\t\t<meta charset=\"UTF-8\" />\n\t\t<style>/*<![CDATA[*/\n@page{size: 210mm 297mm;margin: 10mm;}\n/*]]>*/</style>\n\t</head>\n\t\n<body style=\"word-wrap:break-word;\">\n\t\t<br>\n\t\t\t<br>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:center\">\n\t\t\t\t\t<span style=\"font-size:12pt\">\n\t\t\t\t\t\t<span style=\"color:#000000\">\n\t\t\t\t\t\t\t<strong>\n\t\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t\t\t<img src=\"data:image/jpeg;base64,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\" alt=\"brasao.jpg\" />\n\t\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</strong>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"color:#000000\">\n\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t\tPOLÍCIA FEDERAL\n\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"color:#000000\">\n\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t\t<span id=\"iep9j39rt4e8a\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.nome\">@caso.unidadeDoCaso.nome</span>\n\t\t\t\t\t\t\t\t  - \n\t\t\t\t\t\t\t\t<span id=\"iep28h3dd7ij\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.sigla\">@caso.unidadeDoCaso.sigla</span>\n\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t<span id=\"iepvmammnyta\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.enderecoUnidade\">@caso.unidadeDoCaso.enderecoUnidade</span>\n\t\t\t\t\t\t\t  - \n\t\t\t\t\t\t\t<span id=\"iep8dhhkkfk5r\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.municipio\">@caso.unidadeDoCaso.municipio</span>\n\t\t\t\t\t\t\t/\n\t\t\t\t\t\t\t<span id=\"iep59qtxxwijx\" class=\"varMesclagem\" data-var=\"caso.unidadeDoCaso.municipio.estado.sigla\">@caso.unidadeDoCaso.municipio.estado.sigla</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:center\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:center\">\n\t\t\t\t\t<span style=\"font-size:12pt\">\n\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t<strong>\n\t\t\t\t\t\t\t\t<span style=\"font-size:14pt\">RELATÓRIO N°</span>\n\t\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t\t\t<span style=\"line-height:150%;color:black\">\n\t\t\t\t\t\t\t\t\t\t<span style=\"font-size:14pt\">\n\t\t\t\t\t\t\t\t\t\t\t<span id=\"iep2w43174acr\" class=\"varMesclagem\" data-var=\"numero.documento\">@numero.documento</span>\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<br />\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</strong>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t\t<strong>\n\t\t\t\t\t\t\t\t<span style=\"font-family:&apos;times new roman&apos; , &apos;times&apos; , serif\">\n\t\t\t\t\t\t\t\t\t<span style=\"line-height:150%;color:black\">\n\t\t\t\t\t\t\t\t\t\t<span id=\"iep76dpwesxgq\" class=\"varMesclagem\" data-var=\"caso.ipl\">@caso.ipl</span>\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</strong>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\tINQUÉRITO POLICIAL:\n\t\t\t\t\t\t<span id=\"iep81hxjcb46v\" class=\"varMesclagem\" data-var=\"caso.etiqueta\">@caso.etiqueta</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tProcesso Judicial nº: \n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData do fato:\n\t\t\t\t\t\t<span id=\"iepie9yp4lem\" class=\"varMesclagem\" data-var=\"caso.fato.fatoInicio\">@caso.fato.fatoInicio</span>\n\t\t\t\t\t\t \n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData do protocolo: \n\t\t\t\t\t\t<span id=\"iep8peu4nkq8j\" class=\"varMesclagem\" data-var=\"caso.dataRegistro\">@caso.dataRegistro</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData da instauração:\n\t\t\t\t\t\t<span id=\"iep4mzjnuk0lr\" class=\"varMesclagem\" data-var=\"caso.dataInstauracao\">@caso.dataInstauracao</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData do término da investigação: \n\t\t\t\t\t\t<span id=\"iep2ejqjphdcn\" class=\"varMesclagem\" data-var=\"data\">@data</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tData da prescrição: \n\t\t\t\t\t\t<span id=\"iep2k3tw7tlc2\" class=\"varMesclagem\" data-var=\"caso.dataPrescricao\">@caso.dataPrescricao</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tTipos penais:\n\t\t\t\t\t\t<span id=\"iep8abv8ol256\" class=\"varMesclagem\" data-var=\"condutas.incidencias\">@condutas.incidencias</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tBens apreendidos: [SIM ou NÃO]\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Indiciados: </span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<span style=\"text-align:justify;display:block\">\n\t\t\t\t\t\t\t<span id=\"iep96nl0zcxlt\" class=\"varMesclagem\" style=\"text-align:justify;display:block\" data-var=\"envolvidos.qualificacao.envolvimento\">@envolvidos.qualificacao.envolvimento</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>I- FATO INVESTIGADO E SUAS CIRCUNSTÂNCIAS</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\tO presente Inquérito Policial foi instaurado por Portaria na data supra mencionada, para apurar\n\t\t\t\t\t\t<span id=\"iepc3ffpjxmg\" class=\"varMesclagem\" data-var=\"caso.fato.resumo\">@caso.fato.resumo</span>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>II- DAS DILIGÊNCIAS REALIZADAS</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Texto...</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>III- PROVA DE MATERIALIDADE E INDÍCIOS DE AUTORIA</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Texto... </span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>IV- ELEMENTOS COLHIDOS SOBRE CULPABILIDADE, ANTECEDENTES, CONDUTA SOCIAL, PERSONALIDADE, MOTIVOS, CIRCUNSTÂNCIAS, CONSEQUÊNCIAS DO CRIME E COMPORTAMENTO DA VÍTIMA</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t\tTexto....\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>V- OUTRAS CONSIDERAÇÕES</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Texto....</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">\n\t\t\t\t\t\t<strong>VI- CONCLUSÃO</strong>\n\t\t\t\t\t\t<br />\n\t\t\t\t\t</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-indent:0px;margin:0px;text-align:justify\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">Posto isto, encerram-se os trabalhos de Polícia Judiciária, remetendo-se os presentes autos para apreciação e demais providências que se entendam pertinentes, permanecendo este órgão policial à disposição para eventuais outras diligências que sejam imprescindíveis ao oferecimento da denúncia (art. 16 c/c art. 46/CPP).</span>\n\t\t\t\t</p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\"> </p>\n\t\t\t\t<p style=\"text-align:left;text-indent:0px;margin:0px\">\n\t\t\t\t\t<span style=\"font-size:12pt;font-family:&apos;times new roman&apos; , &apos;times&apos; , serif;color:#000000\">É o relatório.</span>\n\t\t\t\t</p>\n\t\t\t\t<div style=\"text-align: center;\">\n\t\t\t\t\t<br />\n\t\t\t\t\t<br />\n\t\t\t\t\t<div style=\"border-top: 1px solid; border-bottom: 1px solid; page-break-inside: avoid;\">\n\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\tDocumento eletrônico assinado em 11/11/2020, às 07h51, por WELLINGTON COSTA DA SILVA, Escrivao de Policia Federal, na forma do artigo 1º, inciso III, da Lei 11.419, de 19 de dezembro de 2006.\n\t\t\t\t\t\t\tA autenticidade deste documento pode ser conferida no site https://servicos.dpf.gov.br/assinatura/app/assinatura, informando o seguinte código verificador:\n\t\t\t\t\t\t\tec999fcdebbeae903f0f47df0ac5be8e97202da6\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div style=\"text-align: center;\"></div>\n\t\t\t</br>\n\t\t</br>\n\t</body>\n</html>",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{epol-arquivos-url}}/pdf/carimbo/numeracao",
+					"host": [
+						"{{epol-arquivos-url}}"
+					],
+					"path": [
+						"pdf",
+						"carimbo",
+						"numeracao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mergePDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nomeArquivo\": \"arquivoTeste.pdf\",\n\t\"arquivos\": [\n\t\t{\n\t\t\t\"idCmis\": \"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\t\t\"sseKey_x\": \"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\"\n\t\t},\n\t\t{\n\t\t\t\"idCmis\": \"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\t\t\"sseKey_x\": \"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\"\n\t\t},\n        {\n            \"idS3\":\"2021/11/22/20211221/peca/3b383485e4df894a6372bf0115374ecb\"\n        }\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{epol-arquivos-url}}/mergepdf",
+					"host": [
+						"{{epol-arquivos-url}}"
+					],
+					"path": [
+						"mergepdf"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/4/17/20211221/peca/baafd7814ea2774f3ec477baece90981\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "versao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n    \"idS3_x\":\"2021/4/17/20211221/peca/beb14bababae4a53f36a2256eedfa126\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{epol-pauta}}/versao",
+					"host": [
+						"{{epol-pauta}}"
+					],
+					"path": [
+						"versao"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "repositorio_get_object",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/49ace96530bd4c013228e7b0171223b3\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_alfresco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idCmis\":\"e9056057-50f3-4160-9d18-3048449179c1\",\n\t\"md5\":true,\n\t\"sha256\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio/objeto",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio",
+								"objeto"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "repositorio_get_object_decryp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idS3\":\"2021/11/22/20211221/peca/ac232bc2f6f6b29115df40dc5ff22056\",\n\t\"sseKey\":\"e4eIkpU4NmO80HlcWIC+sakiMU/d2llOgsfBP5TZ8vI=\",\n\t\"md5\":true,\n\t\"sha256\":true\n}"
+						},
+						"url": {
+							"raw": "{{epol-arquivos-url}}/repositorio",
+							"host": [
+								"{{epol-arquivos-url}}"
+							],
+							"path": [
+								"repositorio"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "{{epol-arquivos-url}}/4/17/20211221/anexos/9c141e3aecee51e6b79442b0ad31628b",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{epol-arquivos-url}}/4/17/20211221/anexos/9c141e3aecee51e6b79442b0ad31628b",
+					"host": [
+						"{{epol-arquivos-url}}"
+					],
+					"path": [
+						"4",
+						"17",
+						"20211221",
+						"anexos",
+						"9c141e3aecee51e6b79442b0ad31628b"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "password",
+				"value": "epol-server",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "epol-server",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{acces_token_url}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "prehom",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "sistemasDPF",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
