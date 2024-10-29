@@ -1,0 +1,3234 @@
+{
+	"info": {
+		"_postman_id": "c63014cc-2db5-4f8b-bb8b-8b80357ca4c9",
+		"name": "CORPORATIVO-REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3216374",
+		"_collection_link": "https://gold-moon-764602.postman.co/workspace/dpf_epol_arquivos~d0072a29-3025-4bca-a3e0-a4c014303fed/collection/3216374-c63014cc-2db5-4f8b-bb8b-8b80357ca4c9?action=share&source=collection_link&creator=3216374"
+	},
+	"item": [
+		{
+			"name": "Servidores Por Unidade",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authprehom.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MjkxNzQ1NjMsImlhdCI6MTcyOTE3MTg2MywianRpIjoiZDg0MjZkZWEtNGZhMi00MmMzLTliMjUtOTk3YWFiMTYyMTllIiwiaXNzIjoiaHR0cHM6Ly9hdXRocHJlaG9tLnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwicmVhbG0tbWFuYWdlbWVudCIsImFwZXhfaG9tIiwibGVnaXMtcmVzdCIsInNpbmljMi1yZXN0IiwiaW50ZWdyYWNhby1wamUiLCJlcG9sLXNlcnZlciIsInRvZ2dsZS1yZXN0IiwiY29ycmVpY2FvLXJlc3QiLCJhY2NvdW50Il0sInN1YiI6IjZhYWY5ODMzLTA3OTEtNGViNy1iYzBiLWIyMWZiMmY4MzA3ZiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zaXN0ZW1hc3ByZWhvbS5wZi5nb3YuYnIiLCJodHRwOi8vc2RmMzEyNTo4MzgwIiwiaHR0cDovLzEwLjIuMTA0LjExNTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hc2Rlc2Vudi5wZi5nb3YuYnIiLCJodHRwOi8vY29ycG9yYXRpdm8tcmVzdC1jb3Jwb3JhdGl2by1yZXN0LXByZWhvbS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NlcnZpY29zcHJlaG9tLnBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiQWRtaW5pc3RyYWRvciIsInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc2lzdGVtYXNkcGYiLCJnZXJlbmNpYXJfdXN1YXJpb3MiXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS1ncm91cHMiLCJxdWVyeS11c2VycyJdfSwiYXBleF9ob20iOnsicm9sZXMiOlsiQ09OVFJJQlVUT1IiLCJBRE1JTklTVFJBVE9SIiwiUkVBREVSIl19LCJsZWdpcy1yZXN0Ijp7InJvbGVzIjpbInVzdWFyaW9zTGVnaXMiXX0sInNpbmljMi1yZXN0Ijp7InJvbGVzIjpbIk5JVkVMXzQiXX0sImludGVncmFjYW8tcGplIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiY2hlZmVfY2FydG9yaW8iLCJwaWxvdG8iXX0sInRvZ2dsZS1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyBlbWFpbCIsInNpZCI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EgTHVjYSIsInByZWZlcnJlZF91c2VybmFtZSI6InJhcGhhZWwucmJsIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjE2IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.kUu0hmtF38CL6GtPAerYXjY_QCS0TMoRVNf1vA3EzjtNNxjXer6aOcIrE0H28crAjhb1aYY700-3eOf8KKuGAChDNVBoxZ1jLrlF7ORUQTCbYCpvwyveNI6rNa-9bCxiUsT6GPrMrEeAqN7JBi9SSxoN6WwRex1sU1SoJpIzZKRs_W9gpi75iE7zQPW-gG8DQuEgiQVS-0UOIAoj8X6ilC1-_21QuhR6olIJ9ScLAcqMntvXIJ6y-l9sqT63eITnf6xOsvbSa-_0Hyp4XkfLHnWqCKartbc3uZ3eDhlUdjNeBP9h7UArb12xdCqsSJ4vIRktPJLOJV-RXOlc5unKug",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "raphael.rbl",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ctidpf",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?exercicio=",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "exercicio",
+									"value": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "sigla",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servidores por CPF",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "3019959152"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unidades por ID",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Request 1",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "sistemasDPF",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "denis.dsg",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "(@Dsg325207)",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+									"protocol": "https",
+									"host": [
+										"sistemasdesenv",
+										"dpf",
+										"gov",
+										"br"
+									],
+									"path": [
+										"corporativo-rest",
+										"api",
+										"unidades",
+										"id",
+										"12008",
+										"servidores"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10200"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Titular",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "sistemasDPF",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "denis.dsg",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "(@Dsg325207)",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+									"protocol": "https",
+									"host": [
+										"sistemasdesenv",
+										"dpf",
+										"gov",
+										"br"
+									],
+									"path": [
+										"corporativo-rest",
+										"api",
+										"unidades",
+										"id",
+										"12008",
+										"servidores"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2980"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Unidades Subordinadas",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "sigla",
+									"value": "PF"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servidores Por Sigla/Unidade",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "sigla",
+									"value": "BEMIG/DPF/GVS/MG"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servidores na Hierarquia Por Sigla/Unidade",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemashom.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MTI2NzA0MDQsImlhdCI6MTcxMjY2NzcwNCwianRpIjoiYzg2MWYyYzUtZTVjMi00YTdmLWE0NDktYjNhNGE5NDg3OTlkIiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hc2hvbS5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJhcGV4X2hvbSIsImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsImVwb2wtc2VydmVyIiwidG9nZ2xlLXJlc3QiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiNGJjMmE3NTItZTc4Yy00ODBlLWE2MzctNjk5YzI1ODAyOTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzaG9tLmRwZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzaG9tLnBmLmdvdi5iciIsImh0dHBzOi8vc2lzdGVtYXN0cmVpbm8uZHBmLmdvdi5iciIsImh0dHA6Ly9zZGYzMTI1OjgzODAiLCJodHRwczovL3NlcnZpY29zaG9tLnBmLmdvdi5iciIsImh0dHA6Ly8xMC4yLjEwNC4xMTU6ODA4MCIsImh0dHBzOi8vZXBvbC13ZWIuZHBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidXN1YXJpb3NEUEYiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zaXN0ZW1hc2RwZiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhcGV4X2hvbSI6eyJyb2xlcyI6WyJDT05UUklCVVRPUiIsIkFETUlOSVNUUkFUT1IiLCJSRUFERVIiXX0sImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXNlcnZlciI6eyJyb2xlcyI6WyJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJjb3JyZWljYW8tcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBQRi1DdXN0b20tQ2xhaW1zIGVtYWlsIiwic2lkIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLWFycXVpdm9zIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjEwIn0.Nu535NvWSo3tJHbZY4ju_c-PCm2zSHJhtWIltpfyROVPlx7XV_s_Ut3RGOi29CJjHxSKz-kzwlh_0Q5IKaWJYPuJiQBiOABWbfG40c7tiumQfeKpH1kjb8d4WFysvDOK0RBkAwFqEbIlV0Jz0SRyziQjMAuEHPAiGroPMJ6Zg4qAjVevSr63fVjjnBw-Gj9BItPS3v-zl3BkDo7LeFK5VjnAc0w5cYocWRpr2sWuQPyh0i_kTV9T4gOtSQglcSG6Wr1m3DtaU0aPKzR2wxXZLjVWBxEYwY_lrUKliagrNs2CKy2vH-MQtqRIOKvYED8AdfZKvfK_UgthCi6SnPwaAQ",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-arquivos",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "3qtV6e0l",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "sigla",
+									"value": "NUCART/DPF/MII/SP"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paises",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estados",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "35d6b410-6eab-4830-9e32-ad9f97fa112c",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://sistemasdesenv.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authdesenv.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZTHRWaDh0RHlTUnotc0l5NkpDU3NZSGt2VU5fVllVaUlXclpCSXJoV1BvIn0.eyJleHAiOjE2OTcyMTIzNTMsImlhdCI6MTY5NzIwOTY1MywianRpIjoiNjYzZThhOGQtZTY4Yy00MzIyLWI3OGUtMzlkNWQxOGZiNjE1IiwiaXNzIjoiaHR0cHM6Ly9hdXRoZGVzZW52LnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwibGVnaXMtcmVzdCIsImludGVncmFjYW8tcGplIiwiZXBvbC1zZXJ2ZXIiLCJ0b2dnbGUtcmVzdCIsImFjY291bnQiLCJlcG9sLWFycXVpdm9zIiwiZXBvbC1wZGYiLCJlcG9sLWJhdGNoIl0sInN1YiI6ImFhZjk2NDc4LWVmNGUtNDU1ZS04YTA3LTlkYTE0ZWJiOWQwZCIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6ImRiOGJjODJkLTQ3MmYtNDliOC1iODY5LTIyMGRiYTcxNWQ3NSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovLzEwLjIuOTYuMTc6ODE4MCIsImh0dHBzOi8vZGVzLWF0ZW5kaW1lbnRvLnBmLmdvdi5ici9jaXRzbWFydC9sb2dpbi9vYXV0aDIvY29kZS9jaXRzbWFydCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODYzMCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODczMCIsImh0dHBzOi8vc2Vydmljb3NkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vYmFja3N0YWdlLWJhY2tzdGFnZS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIvKiIsImh0dHA6Ly8zNC45NS4xNzEuMTUwLyoiLCJodHRwOi8vMTAuMi45Ni4xMDI6ODQzMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6ODEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMSIsImh0dHBzOi8vb2F1dGgucHN0bW4uaW8vdjEvY2FsbGJhY2siLCJodHRwczovL2F1dGhkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vc2lzdGVtYXNkZXNlbnYucGYuZ292LmJyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImh0dHBzOi8vY2FtdW5kYS1zaXByb3F1aW0tZGV2LmFwcHMub2NwZGV2LnBmLmdvdi5ici9jYW11bmRhLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInNpc3RlbWFzRXh0ZXJub3MiLCJ1c3Vhcmlvc0RQRiIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwibGVnaXMtcmVzdCI6eyJyb2xlcyI6WyJ1c3Vhcmlvc0xlZ2lzIl19LCJpbnRlZ3JhY2FvLXBqZSI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sImVwb2wtYXJxdWl2b3MiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXBkZiI6eyJyb2xlcyI6WyJwaWxvdG8iLCJlcG9sX3BkZl9zZXJ2aWNlIl19LCJlcG9sLWJhdGNoIjp7InJvbGVzIjpbInNpc3RlbWFzQXV0b3JpemFkb3MiXX19LCJzY29wZSI6IlBGLUN1c3RvbS1DbGFpbXMiLCJzaWQiOiJkYjhiYzgyZC00NzJmLTQ5YjgtYjg2OS0yMjBkYmE3MTVkNzUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLXNlcnZlciIsImNsaWVudF9hZGRyZXNzIjoiMTkyLjE2OC43OS4xMjYifQ.AACUvWt9AyrrLVQW_wE19brBuzo8I1ejdVKbSxemesUZpRz6bM_M4zv3JlTtxWKDF00SwCFyxiWAGPG7F60A5eujui76LvrF-e7BxcYgcqwznZlcEhFTA-V86nIJBMoLq2p7BfYiH59JS12z7A5ke25ePdUi9yAHZZZCR6NNOyyAASQBREBT_-mb7N5uERwWFqu-rpFCVoeY2M2cwwjhNUmCMazDkIKVPQ44TGa-ck8qSUgZsC54BY_QUsISbA6v-TP4eOQDW1rYaMSRFdodCPkFfNhWELLJ7-sY7q3tyt3BV8yW6bIx94Fg35aFQ3M5b7IHNYF_3ve5gJtwR3ztsw",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?codPais=24",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "codPais",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Municipios",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?parteNome=",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "parteNome",
+									"value": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "codigo",
+									"value": "3530805"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servidores na Hierarquia Por Id/Unidade",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "35d6b410-6eab-4830-9e32-ad9f97fa112c",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://sistemasdesenv.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authdesenv.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZTHRWaDh0RHlTUnotc0l5NkpDU3NZSGt2VU5fVllVaUlXclpCSXJoV1BvIn0.eyJleHAiOjE2OTcyMTIzNTMsImlhdCI6MTY5NzIwOTY1MywianRpIjoiNjYzZThhOGQtZTY4Yy00MzIyLWI3OGUtMzlkNWQxOGZiNjE1IiwiaXNzIjoiaHR0cHM6Ly9hdXRoZGVzZW52LnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwibGVnaXMtcmVzdCIsImludGVncmFjYW8tcGplIiwiZXBvbC1zZXJ2ZXIiLCJ0b2dnbGUtcmVzdCIsImFjY291bnQiLCJlcG9sLWFycXVpdm9zIiwiZXBvbC1wZGYiLCJlcG9sLWJhdGNoIl0sInN1YiI6ImFhZjk2NDc4LWVmNGUtNDU1ZS04YTA3LTlkYTE0ZWJiOWQwZCIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6ImRiOGJjODJkLTQ3MmYtNDliOC1iODY5LTIyMGRiYTcxNWQ3NSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovLzEwLjIuOTYuMTc6ODE4MCIsImh0dHBzOi8vZGVzLWF0ZW5kaW1lbnRvLnBmLmdvdi5ici9jaXRzbWFydC9sb2dpbi9vYXV0aDIvY29kZS9jaXRzbWFydCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODYzMCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODczMCIsImh0dHBzOi8vc2Vydmljb3NkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vYmFja3N0YWdlLWJhY2tzdGFnZS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIvKiIsImh0dHA6Ly8zNC45NS4xNzEuMTUwLyoiLCJodHRwOi8vMTAuMi45Ni4xMDI6ODQzMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6ODEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMSIsImh0dHBzOi8vb2F1dGgucHN0bW4uaW8vdjEvY2FsbGJhY2siLCJodHRwczovL2F1dGhkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vc2lzdGVtYXNkZXNlbnYucGYuZ292LmJyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImh0dHBzOi8vY2FtdW5kYS1zaXByb3F1aW0tZGV2LmFwcHMub2NwZGV2LnBmLmdvdi5ici9jYW11bmRhLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInNpc3RlbWFzRXh0ZXJub3MiLCJ1c3Vhcmlvc0RQRiIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwibGVnaXMtcmVzdCI6eyJyb2xlcyI6WyJ1c3Vhcmlvc0xlZ2lzIl19LCJpbnRlZ3JhY2FvLXBqZSI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sImVwb2wtYXJxdWl2b3MiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXBkZiI6eyJyb2xlcyI6WyJwaWxvdG8iLCJlcG9sX3BkZl9zZXJ2aWNlIl19LCJlcG9sLWJhdGNoIjp7InJvbGVzIjpbInNpc3RlbWFzQXV0b3JpemFkb3MiXX19LCJzY29wZSI6IlBGLUN1c3RvbS1DbGFpbXMiLCJzaWQiOiJkYjhiYzgyZC00NzJmLTQ5YjgtYjg2OS0yMjBkYmE3MTVkNzUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLXNlcnZlciIsImNsaWVudF9hZGRyZXNzIjoiMTkyLjE2OC43OS4xMjYifQ.AACUvWt9AyrrLVQW_wE19brBuzo8I1ejdVKbSxemesUZpRz6bM_M4zv3JlTtxWKDF00SwCFyxiWAGPG7F60A5eujui76LvrF-e7BxcYgcqwznZlcEhFTA-V86nIJBMoLq2p7BfYiH59JS12z7A5ke25ePdUi9yAHZZZCR6NNOyyAASQBREBT_-mb7N5uERwWFqu-rpFCVoeY2M2cwwjhNUmCMazDkIKVPQ44TGa-ck8qSUgZsC54BY_QUsISbA6v-TP4eOQDW1rYaMSRFdodCPkFfNhWELLJ7-sY7q3tyt3BV8yW6bIx94Fg35aFQ3M5b7IHNYF_3ve5gJtwR3ztsw",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2720"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feriados",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "35d6b410-6eab-4830-9e32-ad9f97fa112c",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://sistemasdesenv.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authdesenv.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZTHRWaDh0RHlTUnotc0l5NkpDU3NZSGt2VU5fVllVaUlXclpCSXJoV1BvIn0.eyJleHAiOjE2OTcyMTIzNTMsImlhdCI6MTY5NzIwOTY1MywianRpIjoiNjYzZThhOGQtZTY4Yy00MzIyLWI3OGUtMzlkNWQxOGZiNjE1IiwiaXNzIjoiaHR0cHM6Ly9hdXRoZGVzZW52LnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwibGVnaXMtcmVzdCIsImludGVncmFjYW8tcGplIiwiZXBvbC1zZXJ2ZXIiLCJ0b2dnbGUtcmVzdCIsImFjY291bnQiLCJlcG9sLWFycXVpdm9zIiwiZXBvbC1wZGYiLCJlcG9sLWJhdGNoIl0sInN1YiI6ImFhZjk2NDc4LWVmNGUtNDU1ZS04YTA3LTlkYTE0ZWJiOWQwZCIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6ImRiOGJjODJkLTQ3MmYtNDliOC1iODY5LTIyMGRiYTcxNWQ3NSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovLzEwLjIuOTYuMTc6ODE4MCIsImh0dHBzOi8vZGVzLWF0ZW5kaW1lbnRvLnBmLmdvdi5ici9jaXRzbWFydC9sb2dpbi9vYXV0aDIvY29kZS9jaXRzbWFydCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODYzMCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODczMCIsImh0dHBzOi8vc2Vydmljb3NkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vYmFja3N0YWdlLWJhY2tzdGFnZS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIvKiIsImh0dHA6Ly8zNC45NS4xNzEuMTUwLyoiLCJodHRwOi8vMTAuMi45Ni4xMDI6ODQzMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6ODEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMSIsImh0dHBzOi8vb2F1dGgucHN0bW4uaW8vdjEvY2FsbGJhY2siLCJodHRwczovL2F1dGhkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vc2lzdGVtYXNkZXNlbnYucGYuZ292LmJyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImh0dHBzOi8vY2FtdW5kYS1zaXByb3F1aW0tZGV2LmFwcHMub2NwZGV2LnBmLmdvdi5ici9jYW11bmRhLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInNpc3RlbWFzRXh0ZXJub3MiLCJ1c3Vhcmlvc0RQRiIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwibGVnaXMtcmVzdCI6eyJyb2xlcyI6WyJ1c3Vhcmlvc0xlZ2lzIl19LCJpbnRlZ3JhY2FvLXBqZSI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sImVwb2wtYXJxdWl2b3MiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXBkZiI6eyJyb2xlcyI6WyJwaWxvdG8iLCJlcG9sX3BkZl9zZXJ2aWNlIl19LCJlcG9sLWJhdGNoIjp7InJvbGVzIjpbInNpc3RlbWFzQXV0b3JpemFkb3MiXX19LCJzY29wZSI6IlBGLUN1c3RvbS1DbGFpbXMiLCJzaWQiOiJkYjhiYzgyZC00NzJmLTQ5YjgtYjg2OS0yMjBkYmE3MTVkNzUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLXNlcnZlciIsImNsaWVudF9hZGRyZXNzIjoiMTkyLjE2OC43OS4xMjYifQ.AACUvWt9AyrrLVQW_wE19brBuzo8I1ejdVKbSxemesUZpRz6bM_M4zv3JlTtxWKDF00SwCFyxiWAGPG7F60A5eujui76LvrF-e7BxcYgcqwznZlcEhFTA-V86nIJBMoLq2p7BfYiH59JS12z7A5ke25ePdUi9yAHZZZCR6NNOyyAASQBREBT_-mb7N5uERwWFqu-rpFCVoeY2M2cwwjhNUmCMazDkIKVPQ44TGa-ck8qSUgZsC54BY_QUsISbA6v-TP4eOQDW1rYaMSRFdodCPkFfNhWELLJ7-sY7q3tyt3BV8yW6bIx94Fg35aFQ3M5b7IHNYF_3ve5gJtwR3ztsw",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prestadores",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authprehom.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MjkxNzQ1NjMsImlhdCI6MTcyOTE3MTg2MywianRpIjoiZDg0MjZkZWEtNGZhMi00MmMzLTliMjUtOTk3YWFiMTYyMTllIiwiaXNzIjoiaHR0cHM6Ly9hdXRocHJlaG9tLnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwicmVhbG0tbWFuYWdlbWVudCIsImFwZXhfaG9tIiwibGVnaXMtcmVzdCIsInNpbmljMi1yZXN0IiwiaW50ZWdyYWNhby1wamUiLCJlcG9sLXNlcnZlciIsInRvZ2dsZS1yZXN0IiwiY29ycmVpY2FvLXJlc3QiLCJhY2NvdW50Il0sInN1YiI6IjZhYWY5ODMzLTA3OTEtNGViNy1iYzBiLWIyMWZiMmY4MzA3ZiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zaXN0ZW1hc3ByZWhvbS5wZi5nb3YuYnIiLCJodHRwOi8vc2RmMzEyNTo4MzgwIiwiaHR0cDovLzEwLjIuMTA0LjExNTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hc2Rlc2Vudi5wZi5nb3YuYnIiLCJodHRwOi8vY29ycG9yYXRpdm8tcmVzdC1jb3Jwb3JhdGl2by1yZXN0LXByZWhvbS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NlcnZpY29zcHJlaG9tLnBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiQWRtaW5pc3RyYWRvciIsInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc2lzdGVtYXNkcGYiLCJnZXJlbmNpYXJfdXN1YXJpb3MiXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS1ncm91cHMiLCJxdWVyeS11c2VycyJdfSwiYXBleF9ob20iOnsicm9sZXMiOlsiQ09OVFJJQlVUT1IiLCJBRE1JTklTVFJBVE9SIiwiUkVBREVSIl19LCJsZWdpcy1yZXN0Ijp7InJvbGVzIjpbInVzdWFyaW9zTGVnaXMiXX0sInNpbmljMi1yZXN0Ijp7InJvbGVzIjpbIk5JVkVMXzQiXX0sImludGVncmFjYW8tcGplIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiY2hlZmVfY2FydG9yaW8iLCJwaWxvdG8iXX0sInRvZ2dsZS1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyBlbWFpbCIsInNpZCI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EgTHVjYSIsInByZWZlcnJlZF91c2VybmFtZSI6InJhcGhhZWwucmJsIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjE2IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.kUu0hmtF38CL6GtPAerYXjY_QCS0TMoRVNf1vA3EzjtNNxjXer6aOcIrE0H28crAjhb1aYY700-3eOf8KKuGAChDNVBoxZ1jLrlF7ORUQTCbYCpvwyveNI6rNa-9bCxiUsT6GPrMrEeAqN7JBi9SSxoN6WwRex1sU1SoJpIzZKRs_W9gpi75iE7zQPW-gG8DQuEgiQVS-0UOIAoj8X6ilC1-_21QuhR6olIJ9ScLAcqMntvXIJ6y-l9sqT63eITnf6xOsvbSa-_0Hyp4XkfLHnWqCKartbc3uZ3eDhlUdjNeBP9h7UArb12xdCqsSJ4vIRktPJLOJV-RXOlc5unKug",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "raphael.rbl",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ctidpf",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "03316588523"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unidades",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?ativo=true",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "ativo",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chefes de Unidade",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemashom.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MTI2NzA0MDQsImlhdCI6MTcxMjY2NzcwNCwianRpIjoiYzg2MWYyYzUtZTVjMi00YTdmLWE0NDktYjNhNGE5NDg3OTlkIiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hc2hvbS5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJhcGV4X2hvbSIsImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsImVwb2wtc2VydmVyIiwidG9nZ2xlLXJlc3QiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiNGJjMmE3NTItZTc4Yy00ODBlLWE2MzctNjk5YzI1ODAyOTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzaG9tLmRwZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzaG9tLnBmLmdvdi5iciIsImh0dHBzOi8vc2lzdGVtYXN0cmVpbm8uZHBmLmdvdi5iciIsImh0dHA6Ly9zZGYzMTI1OjgzODAiLCJodHRwczovL3NlcnZpY29zaG9tLnBmLmdvdi5iciIsImh0dHA6Ly8xMC4yLjEwNC4xMTU6ODA4MCIsImh0dHBzOi8vZXBvbC13ZWIuZHBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidXN1YXJpb3NEUEYiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zaXN0ZW1hc2RwZiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhcGV4X2hvbSI6eyJyb2xlcyI6WyJDT05UUklCVVRPUiIsIkFETUlOSVNUUkFUT1IiLCJSRUFERVIiXX0sImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXNlcnZlciI6eyJyb2xlcyI6WyJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJjb3JyZWljYW8tcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBQRi1DdXN0b20tQ2xhaW1zIGVtYWlsIiwic2lkIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLWFycXVpdm9zIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjEwIn0.Nu535NvWSo3tJHbZY4ju_c-PCm2zSHJhtWIltpfyROVPlx7XV_s_Ut3RGOi29CJjHxSKz-kzwlh_0Q5IKaWJYPuJiQBiOABWbfG40c7tiumQfeKpH1kjb8d4WFysvDOK0RBkAwFqEbIlV0Jz0SRyziQjMAuEHPAiGroPMJ6Zg4qAjVevSr63fVjjnBw-Gj9BItPS3v-zl3BkDo7LeFK5VjnAc0w5cYocWRpr2sWuQPyh0i_kTV9T4gOtSQglcSG6Wr1m3DtaU0aPKzR2wxXZLjVWBxEYwY_lrUKliagrNs2CKy2vH-MQtqRIOKvYED8AdfZKvfK_UgthCi6SnPwaAQ",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-arquivos",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "3qtV6e0l",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "​​​​id",
+									"value": "12862"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SIgla",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemas.dpf.gov.br/corporativo/api/unidades/id/6050/chefes",
+							"protocol": "https",
+							"host": [
+								"sistemas",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"unidades",
+								"id",
+								"6050",
+								"chefes"
+							],
+							"variable": [
+								{
+									"key": "​​​​id",
+									"value": 10040
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assinatura de Servidores",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authprehom.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MjkxNzQ1NjMsImlhdCI6MTcyOTE3MTg2MywianRpIjoiZDg0MjZkZWEtNGZhMi00MmMzLTliMjUtOTk3YWFiMTYyMTllIiwiaXNzIjoiaHR0cHM6Ly9hdXRocHJlaG9tLnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwicmVhbG0tbWFuYWdlbWVudCIsImFwZXhfaG9tIiwibGVnaXMtcmVzdCIsInNpbmljMi1yZXN0IiwiaW50ZWdyYWNhby1wamUiLCJlcG9sLXNlcnZlciIsInRvZ2dsZS1yZXN0IiwiY29ycmVpY2FvLXJlc3QiLCJhY2NvdW50Il0sInN1YiI6IjZhYWY5ODMzLTA3OTEtNGViNy1iYzBiLWIyMWZiMmY4MzA3ZiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zaXN0ZW1hc3ByZWhvbS5wZi5nb3YuYnIiLCJodHRwOi8vc2RmMzEyNTo4MzgwIiwiaHR0cDovLzEwLjIuMTA0LjExNTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hc2Rlc2Vudi5wZi5nb3YuYnIiLCJodHRwOi8vY29ycG9yYXRpdm8tcmVzdC1jb3Jwb3JhdGl2by1yZXN0LXByZWhvbS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NlcnZpY29zcHJlaG9tLnBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiQWRtaW5pc3RyYWRvciIsInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc2lzdGVtYXNkcGYiLCJnZXJlbmNpYXJfdXN1YXJpb3MiXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS1ncm91cHMiLCJxdWVyeS11c2VycyJdfSwiYXBleF9ob20iOnsicm9sZXMiOlsiQ09OVFJJQlVUT1IiLCJBRE1JTklTVFJBVE9SIiwiUkVBREVSIl19LCJsZWdpcy1yZXN0Ijp7InJvbGVzIjpbInVzdWFyaW9zTGVnaXMiXX0sInNpbmljMi1yZXN0Ijp7InJvbGVzIjpbIk5JVkVMXzQiXX0sImludGVncmFjYW8tcGplIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiY2hlZmVfY2FydG9yaW8iLCJwaWxvdG8iXX0sInRvZ2dsZS1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyBlbWFpbCIsInNpZCI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EgTHVjYSIsInByZWZlcnJlZF91c2VybmFtZSI6InJhcGhhZWwucmJsIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjE2IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.kUu0hmtF38CL6GtPAerYXjY_QCS0TMoRVNf1vA3EzjtNNxjXer6aOcIrE0H28crAjhb1aYY700-3eOf8KKuGAChDNVBoxZ1jLrlF7ORUQTCbYCpvwyveNI6rNa-9bCxiUsT6GPrMrEeAqN7JBi9SSxoN6WwRex1sU1SoJpIzZKRs_W9gpi75iE7zQPW-gG8DQuEgiQVS-0UOIAoj8X6ilC1-_21QuhR6olIJ9ScLAcqMntvXIJ6y-l9sqT63eITnf6xOsvbSa-_0Hyp4XkfLHnWqCKartbc3uZ3eDhlUdjNeBP9h7UArb12xdCqsSJ4vIRktPJLOJV-RXOlc5unKug",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "raphael.rbl",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ctidpf",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "38004305172"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Designações Servidores por CPF",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "371621879"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pessoa Juridica RF",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cnpj",
+									"value": "25242466000124"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servidores",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?nome=mariana",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "mariana"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pessoa Fisica RF",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "CPF",
+									"value": "57891281149"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Socio",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "35d6b410-6eab-4830-9e32-ad9f97fa112c",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://sistemasdesenv.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authdesenv.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZTHRWaDh0RHlTUnotc0l5NkpDU3NZSGt2VU5fVllVaUlXclpCSXJoV1BvIn0.eyJleHAiOjE2OTcyMTIzNTMsImlhdCI6MTY5NzIwOTY1MywianRpIjoiNjYzZThhOGQtZTY4Yy00MzIyLWI3OGUtMzlkNWQxOGZiNjE1IiwiaXNzIjoiaHR0cHM6Ly9hdXRoZGVzZW52LnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwibGVnaXMtcmVzdCIsImludGVncmFjYW8tcGplIiwiZXBvbC1zZXJ2ZXIiLCJ0b2dnbGUtcmVzdCIsImFjY291bnQiLCJlcG9sLWFycXVpdm9zIiwiZXBvbC1wZGYiLCJlcG9sLWJhdGNoIl0sInN1YiI6ImFhZjk2NDc4LWVmNGUtNDU1ZS04YTA3LTlkYTE0ZWJiOWQwZCIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6ImRiOGJjODJkLTQ3MmYtNDliOC1iODY5LTIyMGRiYTcxNWQ3NSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovLzEwLjIuOTYuMTc6ODE4MCIsImh0dHBzOi8vZGVzLWF0ZW5kaW1lbnRvLnBmLmdvdi5ici9jaXRzbWFydC9sb2dpbi9vYXV0aDIvY29kZS9jaXRzbWFydCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODYzMCIsImh0dHA6Ly8xMC4yLjk2Ljg6ODczMCIsImh0dHBzOi8vc2Vydmljb3NkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vYmFja3N0YWdlLWJhY2tzdGFnZS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIvKiIsImh0dHA6Ly8zNC45NS4xNzEuMTUwLyoiLCJodHRwOi8vMTAuMi45Ni4xMDI6ODQzMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6NDEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6ODEwMCIsImh0dHA6Ly9sb2NhbGhvc3Q6OTAwMSIsImh0dHBzOi8vb2F1dGgucHN0bW4uaW8vdjEvY2FsbGJhY2siLCJodHRwczovL2F1dGhkZXNlbnYucGYuZ292LmJyLyIsImh0dHBzOi8vc2lzdGVtYXNkZXNlbnYucGYuZ292LmJyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgwLyIsImh0dHBzOi8vY2FtdW5kYS1zaXByb3F1aW0tZGV2LmFwcHMub2NwZGV2LnBmLmdvdi5ici9jYW11bmRhLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInNpc3RlbWFzRXh0ZXJub3MiLCJ1c3Vhcmlvc0RQRiIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwibGVnaXMtcmVzdCI6eyJyb2xlcyI6WyJ1c3Vhcmlvc0xlZ2lzIl19LCJpbnRlZ3JhY2FvLXBqZSI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sImVwb2wtYXJxdWl2b3MiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXBkZiI6eyJyb2xlcyI6WyJwaWxvdG8iLCJlcG9sX3BkZl9zZXJ2aWNlIl19LCJlcG9sLWJhdGNoIjp7InJvbGVzIjpbInNpc3RlbWFzQXV0b3JpemFkb3MiXX19LCJzY29wZSI6IlBGLUN1c3RvbS1DbGFpbXMiLCJzaWQiOiJkYjhiYzgyZC00NzJmLTQ5YjgtYjg2OS0yMjBkYmE3MTVkNzUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLXNlcnZlciIsImNsaWVudF9hZGRyZXNzIjoiMTkyLjE2OC43OS4xMjYifQ.AACUvWt9AyrrLVQW_wE19brBuzo8I1ejdVKbSxemesUZpRz6bM_M4zv3JlTtxWKDF00SwCFyxiWAGPG7F60A5eujui76LvrF-e7BxcYgcqwznZlcEhFTA-V86nIJBMoLq2p7BfYiH59JS12z7A5ke25ePdUi9yAHZZZCR6NNOyyAASQBREBT_-mb7N5uERwWFqu-rpFCVoeY2M2cwwjhNUmCMazDkIKVPQ44TGa-ck8qSUgZsC54BY_QUsISbA6v-TP4eOQDW1rYaMSRFdodCPkFfNhWELLJ7-sY7q3tyt3BV8yW6bIx94Fg35aFQ3M5b7IHNYF_3ve5gJtwR3ztsw",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "epol-server",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cnpj",
+									"value": "64641327000125"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Envolvidos",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?pagina&resultadosPorPagina&tipoProcesso=&nome=jose&nomeMae=",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": "1"
+								},
+								{
+									"key": "resultadosPorPagina",
+									"value": "10"
+								},
+								{
+									"key": "tipoProcesso",
+									"value": ""
+								},
+								{
+									"key": "nome",
+									"value": "jose"
+								},
+								{
+									"key": "nomeMae",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemas.dpf.gov.br/usuarios/alex.aro",
+							"protocol": "https",
+							"host": [
+								"sistemas",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"usuarios",
+								"alex.aro"
+							],
+							"variable": [
+								{
+									"key": "nomeUsuario",
+									"value": "guilherme.gsg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "perfis",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemastreino.dpf.gov.br/corporativo/api/realms/sistemasDPF/sistemas/siproquim-rest/perfis",
+							"protocol": "https",
+							"host": [
+								"sistemastreino",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"realms",
+								"sistemasDPF",
+								"sistemas",
+								"siproquim-rest",
+								"perfis"
+							],
+							"variable": [
+								{
+									"key": "sistema",
+									"value": "sistema"
+								},
+								{
+									"key": "papel",
+									"value": "camunda-admin"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CEP",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authprehom.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MjkxNzQ1NjMsImlhdCI6MTcyOTE3MTg2MywianRpIjoiZDg0MjZkZWEtNGZhMi00MmMzLTliMjUtOTk3YWFiMTYyMTllIiwiaXNzIjoiaHR0cHM6Ly9hdXRocHJlaG9tLnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwicmVhbG0tbWFuYWdlbWVudCIsImFwZXhfaG9tIiwibGVnaXMtcmVzdCIsInNpbmljMi1yZXN0IiwiaW50ZWdyYWNhby1wamUiLCJlcG9sLXNlcnZlciIsInRvZ2dsZS1yZXN0IiwiY29ycmVpY2FvLXJlc3QiLCJhY2NvdW50Il0sInN1YiI6IjZhYWY5ODMzLTA3OTEtNGViNy1iYzBiLWIyMWZiMmY4MzA3ZiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zaXN0ZW1hc3ByZWhvbS5wZi5nb3YuYnIiLCJodHRwOi8vc2RmMzEyNTo4MzgwIiwiaHR0cDovLzEwLjIuMTA0LjExNTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hc2Rlc2Vudi5wZi5nb3YuYnIiLCJodHRwOi8vY29ycG9yYXRpdm8tcmVzdC1jb3Jwb3JhdGl2by1yZXN0LXByZWhvbS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NlcnZpY29zcHJlaG9tLnBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiQWRtaW5pc3RyYWRvciIsInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc2lzdGVtYXNkcGYiLCJnZXJlbmNpYXJfdXN1YXJpb3MiXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS1ncm91cHMiLCJxdWVyeS11c2VycyJdfSwiYXBleF9ob20iOnsicm9sZXMiOlsiQ09OVFJJQlVUT1IiLCJBRE1JTklTVFJBVE9SIiwiUkVBREVSIl19LCJsZWdpcy1yZXN0Ijp7InJvbGVzIjpbInVzdWFyaW9zTGVnaXMiXX0sInNpbmljMi1yZXN0Ijp7InJvbGVzIjpbIk5JVkVMXzQiXX0sImludGVncmFjYW8tcGplIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiY2hlZmVfY2FydG9yaW8iLCJwaWxvdG8iXX0sInRvZ2dsZS1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyBlbWFpbCIsInNpZCI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EgTHVjYSIsInByZWZlcnJlZF91c2VybmFtZSI6InJhcGhhZWwucmJsIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjE2IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.kUu0hmtF38CL6GtPAerYXjY_QCS0TMoRVNf1vA3EzjtNNxjXer6aOcIrE0H28crAjhb1aYY700-3eOf8KKuGAChDNVBoxZ1jLrlF7ORUQTCbYCpvwyveNI6rNa-9bCxiUsT6GPrMrEeAqN7JBi9SSxoN6WwRex1sU1SoJpIzZKRs_W9gpi75iE7zQPW-gG8DQuEgiQVS-0UOIAoj8X6ilC1-_21QuhR6olIJ9ScLAcqMntvXIJ6y-l9sqT63eITnf6xOsvbSa-_0Hyp4XkfLHnWqCKartbc3uZ3eDhlUdjNeBP9h7UArb12xdCqsSJ4vIRktPJLOJV-RXOlc5unKug",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "raphael.rbl",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ctidpf",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/corporativo/api/ceps/13807458",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"ceps",
+								"13807458"
+							],
+							"variable": [
+								{
+									"key": "cep",
+									"value": "71070180"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prehom.dpf.gov.br/corporativo/api/localidades/5300108?parteNome=",
+							"protocol": "https",
+							"host": [
+								"prehom",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"localidades",
+								"5300108"
+							],
+							"query": [
+								{
+									"key": "parteNome",
+									"value": ""
+								}
+							],
+							"variable": [
+								{
+									"key": "codigo",
+									"value": "3530805"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dispositivos Norma",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemashom.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MTI2NzA0MDQsImlhdCI6MTcxMjY2NzcwNCwianRpIjoiYzg2MWYyYzUtZTVjMi00YTdmLWE0NDktYjNhNGE5NDg3OTlkIiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hc2hvbS5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJhcGV4X2hvbSIsImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsImVwb2wtc2VydmVyIiwidG9nZ2xlLXJlc3QiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiNGJjMmE3NTItZTc4Yy00ODBlLWE2MzctNjk5YzI1ODAyOTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzaG9tLmRwZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzaG9tLnBmLmdvdi5iciIsImh0dHBzOi8vc2lzdGVtYXN0cmVpbm8uZHBmLmdvdi5iciIsImh0dHA6Ly9zZGYzMTI1OjgzODAiLCJodHRwczovL3NlcnZpY29zaG9tLnBmLmdvdi5iciIsImh0dHA6Ly8xMC4yLjEwNC4xMTU6ODA4MCIsImh0dHBzOi8vZXBvbC13ZWIuZHBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidXN1YXJpb3NEUEYiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zaXN0ZW1hc2RwZiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhcGV4X2hvbSI6eyJyb2xlcyI6WyJDT05UUklCVVRPUiIsIkFETUlOSVNUUkFUT1IiLCJSRUFERVIiXX0sImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXNlcnZlciI6eyJyb2xlcyI6WyJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJjb3JyZWljYW8tcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBQRi1DdXN0b20tQ2xhaW1zIGVtYWlsIiwic2lkIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLWFycXVpdm9zIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjEwIn0.Nu535NvWSo3tJHbZY4ju_c-PCm2zSHJhtWIltpfyROVPlx7XV_s_Ut3RGOi29CJjHxSKz-kzwlh_0Q5IKaWJYPuJiQBiOABWbfG40c7tiumQfeKpH1kjb8d4WFysvDOK0RBkAwFqEbIlV0Jz0SRyziQjMAuEHPAiGroPMJ6Zg4qAjVevSr63fVjjnBw-Gj9BItPS3v-zl3BkDo7LeFK5VjnAc0w5cYocWRpr2sWuQPyh0i_kTV9T4gOtSQglcSG6Wr1m3DtaU0aPKzR2wxXZLjVWBxEYwY_lrUKliagrNs2CKy2vH-MQtqRIOKvYED8AdfZKvfK_UgthCi6SnPwaAQ",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-arquivos",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "3qtV6e0l",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prehom.dpf.gov.br/corporativo/api/dispositivosNorma/extensao",
+							"protocol": "https",
+							"host": [
+								"prehom",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"dispositivosNorma",
+								"extensao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo Penal",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemashom.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MTI2NzA0MDQsImlhdCI6MTcxMjY2NzcwNCwianRpIjoiYzg2MWYyYzUtZTVjMi00YTdmLWE0NDktYjNhNGE5NDg3OTlkIiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hc2hvbS5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJhcGV4X2hvbSIsImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsImVwb2wtc2VydmVyIiwidG9nZ2xlLXJlc3QiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiNGJjMmE3NTItZTc4Yy00ODBlLWE2MzctNjk5YzI1ODAyOTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzaG9tLmRwZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzaG9tLnBmLmdvdi5iciIsImh0dHBzOi8vc2lzdGVtYXN0cmVpbm8uZHBmLmdvdi5iciIsImh0dHA6Ly9zZGYzMTI1OjgzODAiLCJodHRwczovL3NlcnZpY29zaG9tLnBmLmdvdi5iciIsImh0dHA6Ly8xMC4yLjEwNC4xMTU6ODA4MCIsImh0dHBzOi8vZXBvbC13ZWIuZHBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidXN1YXJpb3NEUEYiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zaXN0ZW1hc2RwZiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhcGV4X2hvbSI6eyJyb2xlcyI6WyJDT05UUklCVVRPUiIsIkFETUlOSVNUUkFUT1IiLCJSRUFERVIiXX0sImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXNlcnZlciI6eyJyb2xlcyI6WyJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJjb3JyZWljYW8tcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBQRi1DdXN0b20tQ2xhaW1zIGVtYWlsIiwic2lkIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLWFycXVpdm9zIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjEwIn0.Nu535NvWSo3tJHbZY4ju_c-PCm2zSHJhtWIltpfyROVPlx7XV_s_Ut3RGOi29CJjHxSKz-kzwlh_0Q5IKaWJYPuJiQBiOABWbfG40c7tiumQfeKpH1kjb8d4WFysvDOK0RBkAwFqEbIlV0Jz0SRyziQjMAuEHPAiGroPMJ6Zg4qAjVevSr63fVjjnBw-Gj9BItPS3v-zl3BkDo7LeFK5VjnAc0w5cYocWRpr2sWuQPyh0i_kTV9T4gOtSQglcSG6Wr1m3DtaU0aPKzR2wxXZLjVWBxEYwY_lrUKliagrNs2CKy2vH-MQtqRIOKvYED8AdfZKvfK_UgthCi6SnPwaAQ",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-arquivos",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "3qtV6e0l",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prehom.dpf.gov.br/corporativo/api/dispositivosNorma/extensao",
+							"protocol": "https",
+							"host": [
+								"prehom",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"dispositivosNorma",
+								"extensao"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prestador Por Sigla/Unidade",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authprehom.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MjkxNzQ1NjMsImlhdCI6MTcyOTE3MTg2MywianRpIjoiZDg0MjZkZWEtNGZhMi00MmMzLTliMjUtOTk3YWFiMTYyMTllIiwiaXNzIjoiaHR0cHM6Ly9hdXRocHJlaG9tLnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwicmVhbG0tbWFuYWdlbWVudCIsImFwZXhfaG9tIiwibGVnaXMtcmVzdCIsInNpbmljMi1yZXN0IiwiaW50ZWdyYWNhby1wamUiLCJlcG9sLXNlcnZlciIsInRvZ2dsZS1yZXN0IiwiY29ycmVpY2FvLXJlc3QiLCJhY2NvdW50Il0sInN1YiI6IjZhYWY5ODMzLTA3OTEtNGViNy1iYzBiLWIyMWZiMmY4MzA3ZiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zaXN0ZW1hc3ByZWhvbS5wZi5nb3YuYnIiLCJodHRwOi8vc2RmMzEyNTo4MzgwIiwiaHR0cDovLzEwLjIuMTA0LjExNTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hc2Rlc2Vudi5wZi5nb3YuYnIiLCJodHRwOi8vY29ycG9yYXRpdm8tcmVzdC1jb3Jwb3JhdGl2by1yZXN0LXByZWhvbS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NlcnZpY29zcHJlaG9tLnBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiQWRtaW5pc3RyYWRvciIsInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc2lzdGVtYXNkcGYiLCJnZXJlbmNpYXJfdXN1YXJpb3MiXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS1ncm91cHMiLCJxdWVyeS11c2VycyJdfSwiYXBleF9ob20iOnsicm9sZXMiOlsiQ09OVFJJQlVUT1IiLCJBRE1JTklTVFJBVE9SIiwiUkVBREVSIl19LCJsZWdpcy1yZXN0Ijp7InJvbGVzIjpbInVzdWFyaW9zTGVnaXMiXX0sInNpbmljMi1yZXN0Ijp7InJvbGVzIjpbIk5JVkVMXzQiXX0sImludGVncmFjYW8tcGplIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiY2hlZmVfY2FydG9yaW8iLCJwaWxvdG8iXX0sInRvZ2dsZS1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyBlbWFpbCIsInNpZCI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EgTHVjYSIsInByZWZlcnJlZF91c2VybmFtZSI6InJhcGhhZWwucmJsIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjE2IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.kUu0hmtF38CL6GtPAerYXjY_QCS0TMoRVNf1vA3EzjtNNxjXer6aOcIrE0H28crAjhb1aYY700-3eOf8KKuGAChDNVBoxZ1jLrlF7ORUQTCbYCpvwyveNI6rNa-9bCxiUsT6GPrMrEeAqN7JBi9SSxoN6WwRex1sU1SoJpIzZKRs_W9gpi75iE7zQPW-gG8DQuEgiQVS-0UOIAoj8X6ilC1-_21QuhR6olIJ9ScLAcqMntvXIJ6y-l9sqT63eITnf6xOsvbSa-_0Hyp4XkfLHnWqCKartbc3uZ3eDhlUdjNeBP9h7UArb12xdCqsSJ4vIRktPJLOJV-RXOlc5unKug",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "raphael.rbl",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ctidpf",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores?pagina=&resultadosPorPagina=&nome=",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": ""
+								},
+								{
+									"key": "resultadosPorPagina",
+									"value": ""
+								},
+								{
+									"key": "nome",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UnidadesSigla",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.pf.gov.br/corporativo/api/unidades/9360",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"pf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"unidades",
+								"9360"
+							],
+							"variable": [
+								{
+									"key": "sigla",
+									"value": "COGER/PF"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chefes de Unidade Sigla",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemashom.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MTI2NzA0MDQsImlhdCI6MTcxMjY2NzcwNCwianRpIjoiYzg2MWYyYzUtZTVjMi00YTdmLWE0NDktYjNhNGE5NDg3OTlkIiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hc2hvbS5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJhcGV4X2hvbSIsImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsImVwb2wtc2VydmVyIiwidG9nZ2xlLXJlc3QiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiNGJjMmE3NTItZTc4Yy00ODBlLWE2MzctNjk5YzI1ODAyOTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzaG9tLmRwZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzaG9tLnBmLmdvdi5iciIsImh0dHBzOi8vc2lzdGVtYXN0cmVpbm8uZHBmLmdvdi5iciIsImh0dHA6Ly9zZGYzMTI1OjgzODAiLCJodHRwczovL3NlcnZpY29zaG9tLnBmLmdvdi5iciIsImh0dHA6Ly8xMC4yLjEwNC4xMTU6ODA4MCIsImh0dHBzOi8vZXBvbC13ZWIuZHBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidXN1YXJpb3NEUEYiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zaXN0ZW1hc2RwZiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhcGV4X2hvbSI6eyJyb2xlcyI6WyJDT05UUklCVVRPUiIsIkFETUlOSVNUUkFUT1IiLCJSRUFERVIiXX0sImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXNlcnZlciI6eyJyb2xlcyI6WyJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJjb3JyZWljYW8tcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBQRi1DdXN0b20tQ2xhaW1zIGVtYWlsIiwic2lkIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLWFycXVpdm9zIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjEwIn0.Nu535NvWSo3tJHbZY4ju_c-PCm2zSHJhtWIltpfyROVPlx7XV_s_Ut3RGOi29CJjHxSKz-kzwlh_0Q5IKaWJYPuJiQBiOABWbfG40c7tiumQfeKpH1kjb8d4WFysvDOK0RBkAwFqEbIlV0Jz0SRyziQjMAuEHPAiGroPMJ6Zg4qAjVevSr63fVjjnBw-Gj9BItPS3v-zl3BkDo7LeFK5VjnAc0w5cYocWRpr2sWuQPyh0i_kTV9T4gOtSQglcSG6Wr1m3DtaU0aPKzR2wxXZLjVWBxEYwY_lrUKliagrNs2CKy2vH-MQtqRIOKvYED8AdfZKvfK_UgthCi6SnPwaAQ",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-arquivos",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "3qtV6e0l",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "sigla",
+									"value": "DPF/BRU/SP"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servidores Por Unidade Sigla",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://authprehom.pf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MjkxNzQ1NjMsImlhdCI6MTcyOTE3MTg2MywianRpIjoiZDg0MjZkZWEtNGZhMi00MmMzLTliMjUtOTk3YWFiMTYyMTllIiwiaXNzIjoiaHR0cHM6Ly9hdXRocHJlaG9tLnBmLmdvdi5ici9hdXRoL3JlYWxtcy9zaXN0ZW1hc0RQRiIsImF1ZCI6WyJkZXBvc2l0by1yZXN0IiwicmVhbG0tbWFuYWdlbWVudCIsImFwZXhfaG9tIiwibGVnaXMtcmVzdCIsInNpbmljMi1yZXN0IiwiaW50ZWdyYWNhby1wamUiLCJlcG9sLXNlcnZlciIsInRvZ2dsZS1yZXN0IiwiY29ycmVpY2FvLXJlc3QiLCJhY2NvdW50Il0sInN1YiI6IjZhYWY5ODMzLTA3OTEtNGViNy1iYzBiLWIyMWZiMmY4MzA3ZiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNpc3RlbWFzRFBGIiwic2Vzc2lvbl9zdGF0ZSI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zaXN0ZW1hc3ByZWhvbS5wZi5nb3YuYnIiLCJodHRwOi8vc2RmMzEyNTo4MzgwIiwiaHR0cDovLzEwLjIuMTA0LjExNTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hc2Rlc2Vudi5wZi5nb3YuYnIiLCJodHRwOi8vY29ycG9yYXRpdm8tcmVzdC1jb3Jwb3JhdGl2by1yZXN0LXByZWhvbS5hcHBzLm9jcGRlc2Vudi5wZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzcHJlaG9tLmRwZi5nb3YuYnIiLCJodHRwOi8vbG9jYWxob3N0OjQyMDAiLCJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJodHRwczovL3NlcnZpY29zcHJlaG9tLnBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiQWRtaW5pc3RyYWRvciIsInVzdWFyaW9zRFBGIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc2lzdGVtYXNkcGYiLCJnZXJlbmNpYXJfdXN1YXJpb3MiXX0sInJlc291cmNlX2FjY2VzcyI6eyJkZXBvc2l0by1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS1ncm91cHMiLCJxdWVyeS11c2VycyJdfSwiYXBleF9ob20iOnsicm9sZXMiOlsiQ09OVFJJQlVUT1IiLCJBRE1JTklTVFJBVE9SIiwiUkVBREVSIl19LCJsZWdpcy1yZXN0Ijp7InJvbGVzIjpbInVzdWFyaW9zTGVnaXMiXX0sInNpbmljMi1yZXN0Ijp7InJvbGVzIjpbIk5JVkVMXzQiXX0sImludGVncmFjYW8tcGplIjp7InJvbGVzIjpbInBpbG90byJdfSwiZXBvbC1zZXJ2ZXIiOnsicm9sZXMiOlsiY2hlZmVfY2FydG9yaW8iLCJwaWxvdG8iXX0sInRvZ2dsZS1yZXN0Ijp7InJvbGVzIjpbInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyBlbWFpbCIsInNpZCI6IjI0NTEzNTIwLTkwMDItNGJmNy05MDdhLWQ0YTE5NDg0Nzc2YyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EgTHVjYSIsInByZWZlcnJlZF91c2VybmFtZSI6InJhcGhhZWwucmJsIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjE2IiwiZ2l2ZW5fbmFtZSI6IlJhcGhhZWwgQmFnZ2lvIGRlIEx1Y2EiLCJmYW1pbHlfbmFtZSI6Ikx1Y2EiLCJlbWFpbCI6InJhcGhhZWwucmJsQGRwZi5nb3YuYnIifQ.kUu0hmtF38CL6GtPAerYXjY_QCS0TMoRVNf1vA3EzjtNNxjXer6aOcIrE0H28crAjhb1aYY700-3eOf8KKuGAChDNVBoxZ1jLrlF7ORUQTCbYCpvwyveNI6rNa-9bCxiUsT6GPrMrEeAqN7JBi9SSxoN6WwRex1sU1SoJpIzZKRs_W9gpi75iE7zQPW-gG8DQuEgiQVS-0UOIAoj8X6ilC1-_21QuhR6olIJ9ScLAcqMntvXIJ6y-l9sqT63eITnf6xOsvbSa-_0Hyp4XkfLHnWqCKartbc3uZ3eDhlUdjNeBP9h7UArb12xdCqsSJ4vIRktPJLOJV-RXOlc5unKug",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "raphael.rbl",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ctidpf",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2280"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsuariosCPF",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemas.dpf.gov.br/usuarios/alex.aro",
+							"protocol": "https",
+							"host": [
+								"sistemas",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"usuarios",
+								"alex.aro"
+							],
+							"variable": [
+								{
+									"key": "cpfCnpj",
+									"value": "496720104"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prestador Por CPF",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "denis.dsg",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "(@Dsg325207)",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+							"protocol": "https",
+							"host": [
+								"sistemasdesenv",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo-rest",
+								"api",
+								"unidades",
+								"id",
+								"12008",
+								"servidores"
+							],
+							"variable": [
+								{
+									"key": "cpf",
+									"value": "17125724744"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unidades",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "Request 1",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "sistemasDPF",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "denis.dsg",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "(@Dsg325207)",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+									"protocol": "https",
+									"host": [
+										"sistemasdesenv",
+										"dpf",
+										"gov",
+										"br"
+									],
+									"path": [
+										"corporativo-rest",
+										"api",
+										"unidades",
+										"id",
+										"12008",
+										"servidores"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3300"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Titular",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "sistemasDPF",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "16cfbdf5-c2e9-44eb-894c-d8b2db9ed15c",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://sistemas.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJMOWNQZ3hIX3Y2bzZIYU4temRfUmJUUVJKVm14TDRrc0V5b1hndGFOMHpZIn0.eyJleHAiOjE3MTU4ODQzNzIsImlhdCI6MTcxNTg4NDA3MiwianRpIjoiMDM2MmMwOWUtMjY3NS00ZTk3LWFlNjctM2M1NzI5M2ZkNDA0IiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsInRvZ2dsZS1yZXN0IiwiZXBvbC1zZXJ2ZXIiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiYmIwMzdhODMtNTU1Ny00NGZjLTk2YjctN2U3NTJjMmQ0NzYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiMmUyZjkzYTEtODE3OC00MjhmLTk4M2UtNDVlMzU5YTYwZjYxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzLnBmLmdvdi5iciIsImh0dHA6Ly9zZGYwMDc4LnBmLmdvdi5icjo4MDgwLyoiLCJodHRwOi8vMTAuMi4xMTIuMTAxOjgwODAvKiIsImh0dHA6Ly8xMC4yLjExMi44OTo4MDgwIiwiaHR0cHM6Ly9zaXN0ZW1hcy5kcGYuZ292LmJyIiwiaHR0cDovL3NkZjAzOTQucGYuZ292LmJyOjg0ODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzdWFyaW9zRFBGIiwiYXJxdWl0ZXRvIiwiZGVzZW52b2x2ZWRvciIsImhvbW9sb2dhX3ByZWhvbSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJ0b2dnbGUtcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImVwb2wtc2VydmVyIjp7InJvbGVzIjpbInVzdWFyaW9fZXh0ZXJubyIsInVzdWFyaW9zX3RlcmNlaXJpemFkb3MiLCJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwiY29ycmVpY2FvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgUEYtQ3VzdG9tLUNsYWltcyIsInNpZCI6IjJlMmY5M2ExLTgxNzgtNDI4Zi05ODNlLTQ1ZTM1OWE2MGY2MSIsIm5hbWUiOiJEZW5pcyBHaXJvdG8iLCJjbGllbnRfYWRkcmVzcyI6IjE5Mi4xNjguNzkuODIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW5pcy5kc2ciLCJsb2NhbGUiOiJwdC1CUiIsImdpdmVuX25hbWUiOiJEZW5pcyIsImZhbWlseV9uYW1lIjoiR2lyb3RvIiwiZW1haWwiOiJkZW5pcy5kc2dAZHBmLmdvdi5iciJ9.f4yysrzFSRwgDSf13pGD_WLCQD1znXyJHSe897t46Cybw6OpUkFaq7KejnxbfR8V9AJM7gDD4fA6mmK-LyDKuq_EJH1X3sd9wysu7k9sPvHF1Tz0fRetrcC6XeHqw_W_5cCraDSrQfxUA3PFZjSleZq6sF2G1TjAEipWz9QnLwG6O0_xxjtx81GbOUAmv2zZLd1O55CWn7aYps2Pe53ORizxQIIU1E3d2YzOlRFfXPgltM0fZCE22AM9nu1n9d9DKWRfOQeDHVPX3orL0QhWve_cCkrcsVOC2MUy73wk1Lr-XbS7jwK8PLukQnVK23TwJu1hJXwrbRYbM2XA9ZQjRA",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "denis.dsg",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "(@Dsg325207)",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sistemasdesenv.dpf.gov.br/corporativo-rest/api/unidades/id/12008/servidores",
+									"protocol": "https",
+									"host": [
+										"sistemasdesenv",
+										"dpf",
+										"gov",
+										"br"
+									],
+									"path": [
+										"corporativo-rest",
+										"api",
+										"unidades",
+										"id",
+										"12008",
+										"servidores"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1810"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dispositivos Norma id",
+			"item": [
+				{
+					"name": "Method 1",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "sistemasDPF",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "34cb2667-8c7e-47fa-8a41-74f09c7b3c78",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://sistemashom.dpf.gov.br/auth/realms/sistemasDPF/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0bmtsNXl1bEpqWHQ3THN0NHBxelFpQnZjc3RqWTZOUG5VNElNcXYwUHY4In0.eyJleHAiOjE3MTI2NzA0MDQsImlhdCI6MTcxMjY2NzcwNCwianRpIjoiYzg2MWYyYzUtZTVjMi00YTdmLWE0NDktYjNhNGE5NDg3OTlkIiwiaXNzIjoiaHR0cHM6Ly9zaXN0ZW1hc2hvbS5kcGYuZ292LmJyL2F1dGgvcmVhbG1zL3Npc3RlbWFzRFBGIiwiYXVkIjpbImRlcG9zaXRvLXJlc3QiLCJhcGV4X2hvbSIsImxlZ2lzLXJlc3QiLCJpbnRlZ3JhY2FvLXBqZSIsImVwb2wtc2VydmVyIiwidG9nZ2xlLXJlc3QiLCJjb3JyZWljYW8tcmVzdCIsImFjY291bnQiXSwic3ViIjoiNGJjMmE3NTItZTc4Yy00ODBlLWE2MzctNjk5YzI1ODAyOTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2lzdGVtYXNEUEYiLCJzZXNzaW9uX3N0YXRlIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3Npc3RlbWFzaG9tLmRwZi5nb3YuYnIiLCJodHRwczovL3Npc3RlbWFzaG9tLnBmLmdvdi5iciIsImh0dHBzOi8vc2lzdGVtYXN0cmVpbm8uZHBmLmdvdi5iciIsImh0dHA6Ly9zZGYzMTI1OjgzODAiLCJodHRwczovL3NlcnZpY29zaG9tLnBmLmdvdi5iciIsImh0dHA6Ly8xMC4yLjEwNC4xMTU6ODA4MCIsImh0dHBzOi8vZXBvbC13ZWIuZHBmLmdvdi5iciJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidXN1YXJpb3NEUEYiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zaXN0ZW1hc2RwZiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImRlcG9zaXRvLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJhcGV4X2hvbSI6eyJyb2xlcyI6WyJDT05UUklCVVRPUiIsIkFETUlOSVNUUkFUT1IiLCJSRUFERVIiXX0sImxlZ2lzLXJlc3QiOnsicm9sZXMiOlsidXN1YXJpb3NMZWdpcyJdfSwiaW50ZWdyYWNhby1wamUiOnsicm9sZXMiOlsicGlsb3RvIl19LCJlcG9sLXNlcnZlciI6eyJyb2xlcyI6WyJjaGVmZV9jYXJ0b3JpbyIsInBpbG90byJdfSwidG9nZ2xlLXJlc3QiOnsicm9sZXMiOlsicGlsb3RvIl19LCJjb3JyZWljYW8tcmVzdCI6eyJyb2xlcyI6WyJwaWxvdG8iXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBQRi1DdXN0b20tQ2xhaW1zIGVtYWlsIiwic2lkIjoiM2NiNWM2NWQtMzRhYi00ZjNlLTkwMTMtZGJhODk0MmI2MWVkIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJlcG9sLWFycXVpdm9zIiwiY2xpZW50X2FkZHJlc3MiOiIxOTIuMTY4Ljc5LjEwIn0.Nu535NvWSo3tJHbZY4ju_c-PCm2zSHJhtWIltpfyROVPlx7XV_s_Ut3RGOi29CJjHxSKz-kzwlh_0Q5IKaWJYPuJiQBiOABWbfG40c7tiumQfeKpH1kjb8d4WFysvDOK0RBkAwFqEbIlV0Jz0SRyziQjMAuEHPAiGroPMJ6Zg4qAjVevSr63fVjjnBw-Gj9BItPS3v-zl3BkDo7LeFK5VjnAc0w5cYocWRpr2sWuQPyh0i_kTV9T4gOtSQglcSG6Wr1m3DtaU0aPKzR2wxXZLjVWBxEYwY_lrUKliagrNs2CKy2vH-MQtqRIOKvYED8AdfZKvfK_UgthCi6SnPwaAQ",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "password_credentials",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "epol-arquivos",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "3qtV6e0l",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://prehom.dpf.gov.br/corporativo/api/dispositivosNorma/extensao",
+							"protocol": "https",
+							"host": [
+								"prehom",
+								"dpf",
+								"gov",
+								"br"
+							],
+							"path": [
+								"corporativo",
+								"api",
+								"dispositivosNorma",
+								"extensao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "refreshRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "tokenRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "authRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "tokenName",
+				"value": "token_epolrest",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "raphael.rbl",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "ctidpf",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "sistemasDPF",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{acces_token_url}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
